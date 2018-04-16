@@ -1,0 +1,115 @@
+.container {
+	overflow-y:auto;
+}
+/*相册列表*/
+.album-list .weui-media-box_appmsg .weui-media-box__hd{
+	width: 90px;
+	height: 90px;
+}
+.album-list .weui-media-box__desc{
+	font-size: 14px;
+	line-height: 25px;
+	-webkit-line-clamp:1;
+}
+
+/*列表上拉加载样式*/
+.scroll{
+    position: absolute;
+    z-index: 1;
+    top: 0px;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+#pullUp {
+	background:transparent;
+	height:40px;
+	padding:10px 0;
+	font-weight:bold;
+	font-size:14px;
+	color:#888;
+}
+.weui-loadmore{
+	width:100%;
+}
+.weui-loadmore_line{
+	margin-top:1.2em;
+}
+.weui-loadmore_line .weui-loadmore__tips{
+	background-color:#f8f8f8;
+}
+
+
+
+
+
+/*相册详细内容*/
+.album-content{
+	margin-top:10px;
+	padding:15px;
+}
+.album-content-title{
+	position: relative;
+}
+.album-content-title span{
+	position: absolute;
+	right: 0;
+	top: 0;
+	color:#999;
+}
+.album-content p{
+	margin:10px 0;
+}
+.album-content ul{
+	overflow: hidden;
+}
+.album-content li{
+	width: 50%;
+	float: left;
+	padding:5px;
+	box-sizing: border-box;
+}
+.album-content li:nth-child(odd){
+	padding-left: 0;
+}
+.album-content li:nth-child(even){
+	padding-right: 0;
+}
+/*.album-content li{
+	width: 100%;
+	float: left;
+	margin-top:10px;
+	box-sizing: border-box;
+}*/
+.album-content li img{
+	display: block;
+	width: 100%;
+}
+.album-content-toolbar{
+	padding-top:5px;
+	text-align: right;
+}
+.album-content-toolbar a{
+	display: inline-block;
+	width:24px;
+	height: 24px;
+}
+.album-content-toolbar a.collect{
+	background: url(../images/album/collect.png) no-repeat;
+	background-size: 100% 100%;
+}
+.album-content-toolbar a.collect:active{
+	background: url(../images/album/collect_on.png) no-repeat;
+	background-size: 100% 100%;
+}
+.album-content-toolbar a.comment{
+	margin-left:10px;
+	background: url(../images/album/comment.png) no-repeat;
+	background-size: 100% 100%;
+}
+.album-content-toolbar a.comment:active{
+	background: url(../images/album/comment_on.png) no-repeat;
+	background-size: 100% 100%;
+}

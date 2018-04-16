@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+    	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title>食谱查询</title>
+		<link rel="stylesheet" type="text/css" href="../../plugins/weui/css/weui.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/common.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/myLaydate.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/food.css"/>
+	</head>
+	<body ontouchstart>
+		<header class="header">
+			<a class="header-back"></a>
+			<h1 class="header-title">食谱查询</h1>
+		</header>
+		<div class="container">
+			<div id="calendar" class="calendar"></div>
+			<div class="food-list">
+				<div class="food-box breakfast">
+					早餐
+					<p>牛奶、鸡蛋</p>
+					<img src="../../images/enrollment/main.png" />
+					<img src="../../images/enrollment/main.png" />
+					<div class="food-box-bottom">
+						<a href="#" class="collect"></a>
+						<a href="#" class="comment"></a>
+					</div>
+				</div>
+				<div class="food-box lunch">
+					午餐
+					<p>牛奶、鸡蛋</p>
+					<img src="../../images/enrollment/main.png" />
+					<img src="../../images/enrollment/main.png" />
+					<div class="food-box-bottom">
+						<a href="#" class="collect"></a>
+						<a href="#" class="comment"></a>
+					</div>
+				</div>
+				<div class="food-box dessert">
+					下午茶
+					<p>牛奶、鸡蛋</p>
+					<img src="../../images/enrollment/main.png" />
+					<img src="../../images/enrollment/main.png" />
+					<div class="food-box-bottom">
+						<a href="#" class="collect"></a>
+						<a href="#" class="comment"></a>
+					</div>
+				</div>
+				<div class="food-box dinner">
+					晚餐
+					<p>牛奶、鸡蛋</p>
+					<img src="../../images/enrollment/main.png" />
+					<img src="../../images/enrollment/main.png" />
+					<div class="food-box-bottom">
+						<a href="#" class="collect"></a>
+						<a href="#" class="comment"></a>
+					</div>
+				</div>
+			</div>
+        </div>
+        <script src="../../plugins/zepto.min.js" ></script>
+        <script src="../../plugins/weui/js/weui.min.js" ></script>
+        <script src="../../plugins/laydate/laydate.js"></script>
+        <script type="text/javascript">
+			laydate.render({
+			  elem: '#calendar',
+			  position: 'static',
+			  change: function(value, date){ //监听日期被切换
+			    alert(value + date);
+			  }
+			});
+			
+			//点击查看图片
+	        $('.food-box').on('click','img',function(){
+	        	var gallery = weui.gallery(this.src, {
+					className: 'custom-classname',
+					onDelete: function(){
+						if(confirm('确定删除该图片？')){ console.log('删除'); }
+						gallery.hide(function() {
+							console.log('`gallery` has been hidden');
+						});
+					}
+				});
+	        });
+		</script>
+	</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+    	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title>通讯录</title>
+		<link rel="stylesheet" type="text/css" href="../../plugins/weui/css/weui.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/common.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/contact.css"/>
+	</head>
+	<body ontouchstart>
+		<header class="header">
+			<select class="header-left">
+				<option value ="volvo">小二班 小麦兜 </option>
+				<option value ="saab">小一班 小新</option>
+			</select>
+			<i class="icon-down"></i>
+			<h1 class="header-title">通讯录</h1>
+			<a class="header-right">切换老师</a>
+		</header>
+		<div class="container">
+			<div class="weui-search-bar" id="searchBar">
+	            <form class="weui-search-bar__form">
+	                <div class="weui-search-bar__box">
+	                    <i class="weui-icon-search"></i>
+	                    <input type="search" class="weui-search-bar__input" id="searchInput" placeholder="请输入联系人信息" required/>
+	                    <a href="javascript:" class="weui-icon-clear" id="searchClear"></a>
+	                </div>
+	                <label class="weui-search-bar__label" id="searchText">
+	                    <i class="weui-icon-search"></i>
+	                    <span>搜索</span>
+	                </label>
+	            </form>
+	            <a href="javascript:" class="weui-search-bar__cancel-btn" id="searchCancel">取消</a>
+	        </div>
+			<div class="weui-tab">
+				 <div class="weui-navbar">
+	                <div class="weui-navbar__item weui-bar__item_on" href="#tab1">
+	                	 老师
+	                </div>
+	                <div class="weui-navbar__item" href="#tab2">
+	                	家长
+	                </div>
+	            </div>
+				<div class="weui-tab__panel">
+					<div id="tab1" class="tab-content" style="display: block;">
+						<div class="contact-box">
+							<div class="contact-box-left">
+								<img src="../../images/bus.png" />
+								<h3>张美丽</h3>
+								<p>小一班 班主任</p>
+							</div>
+							<div class="contact-box-btn">
+								<a class="icon-tel"></a>
+								<a class="icon-msg" href="chat.html"></a>
+							</div>
+						</div>
+						<div class="contact-box">
+							<div class="contact-box-left">
+								<img src="../../images/bus.png" />
+								<h3>李美丽</h3>
+								<p>小一班 班主任</p>
+							</div>
+							<div class="contact-box-btn">
+								<a class="icon-tel"></a>
+								<a class="icon-msg" href="chat.html"></a>
+							</div>
+						</div>
+						<div class="contact-box">
+							<div class="contact-box-left">
+								<img src="../../images/bus.png" />
+								<h3>覃美丽</h3>
+								<p>小一班 班主任</p>
+							</div>
+							<div class="contact-box-btn">
+								<a class="icon-tel"></a>
+								<a class="icon-msg" href="chat.html"><span class="weui-badge" style="position: absolute;top: -.4em;left: -.6em;">3</span></a>
+							</div>
+						</div>
+					</div>
+					<div id="tab2" class="tab-content">
+						<div class="contact-box">
+							<div class="contact-box-left">
+								<img src="../../images/enrollment/cost.png" />
+								<h3>张先森</h3>
+								<p>小麦兜的爸爸</p>
+							</div>
+							<div class="contact-box-btn">
+								<a class="icon-tel"></a>
+								<a class="icon-msg" href="chat.html"></a>
+							</div>
+						</div>
+						<div class="contact-box">
+							<div class="contact-box-left">
+								<img src="../../images/enrollment/cost.png" />
+								<h3>王女士</h3>
+								<p>小麦兜的妈妈</p>
+							</div>
+							<div class="contact-box-btn">
+								<a class="icon-tel"></a>
+								<a class="icon-msg" href="chat.html"></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- 底部tabbar -->
+	        <div class="weui-tabbar">
+	            <a href="../../index.html" class="weui-tabbar__item">
+	                <i class="weui-tabbar__icon icon-school"></i>
+	                <p class="weui-tabbar__label">校园</p>
+	            </a>
+	            <a href="dynamic.html" class="weui-tabbar__item">
+	            	<span style="display: inline-block;position: relative;">
+	                	<i class="weui-tabbar__icon icon-dynamic"></i>
+	                	<span class="weui-badge" style="position: absolute;top: -2px;right: -13px;">8</span>
+	                </span>
+	                <p class="weui-tabbar__label">动态</p>
+	            </a>
+	            <a href="javascript:;" class="weui-tabbar__item weui-bar__item_on">
+	                <i class="weui-tabbar__icon icon-contact"></i>
+	                <p class="weui-tabbar__label">通讯录</p>
+	            </a>
+	            <a href="myself.html" class="weui-tabbar__item">
+	                <span style="display: inline-block;position: relative;">
+	                	<i class="weui-tabbar__icon icon-myself"></i>
+	                	<span class="weui-badge weui-badge_dot" style="position: absolute;top: 0;right: -6px;"></span>
+	                </span>
+	                <p class="weui-tabbar__label">我的</p>
+	            </a>
+	        </div>
+        </div>
+        <script src="../../plugins/jquery-2.1.4.js" ></script>
+        <script src="../../plugins/weui/js/weui.min.js" ></script>
+		<script src="../../plugins/typeahead.js"></script>
+        <script type="text/javascript">
+			$(function(){
+		        //底部tab切换
+		        $('.weui-tabbar__item').on('click', function () {
+		            $(this).addClass('weui-bar__item_on').siblings('.weui-bar__item_on').removeClass('weui-bar__item_on');
+		        });
+		        
+		        //搜索
+		       	weui.searchBar('#searchBar');
+		        var dataSource = ['12', '1234', '123456', '221', '23314', '222', '444', '555'];
+		        $("#searchInput").typeahead({
+		            source: dataSource, // 数据源
+		        });
+		        
+		        //tab切换
+		        $('.weui-navbar__item').on('click', function () {
+		            $(this).addClass('weui-bar__item_on').siblings('.weui-bar__item_on').removeClass('weui-bar__item_on');
+		            
+		            var data_toggle =$(this).attr("href");
+		            $(data_toggle).siblings().hide();
+            		$(data_toggle).show();
+		        });
+		    });
+		</script>
+	</body>
+</html>

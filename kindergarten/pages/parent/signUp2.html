@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+    	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title>报名步骤二</title>
+		<link rel="stylesheet" type="text/css" href="../../plugins/weui/css/weui.css" />
+		<link rel="stylesheet" type="text/css" href="../../plugins/jquery-weui/jquery-weui.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/common.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/signUp.css"/>
+	</head>
+	<body ontouchstart>
+		<header class="header">
+			<a class="header-back"></a>
+			<h1 class="header-title">报名</h1>
+		</header>
+		<div class="container">
+			<div class="signUp-top">
+				<div class="weui-cells">
+					<div class="weui-cell weui-cell_select weui-cell_select-after">
+		                <div class="weui-cell__hd">
+		                    <label for="" class="weui-label">血型</label>
+		                </div>
+		                <div class="weui-cell__bd">
+		                    <select class="weui-select" name="bloodType">
+		                        <option value="A">A型</option>
+		                        <option value="B">B型</option>
+		                        <option value="AB">AB型</option>
+		                        <option value="O">O型</option>
+		                    </select>
+		                </div>
+		            </div>
+		            <div class="weui-cell weui-cell_select weui-cell_select-after">
+		                <div class="weui-cell__hd">
+		                    <label for="" class="weui-label">国籍</label>
+		                </div>
+		                <div class="weui-cell__bd">
+		                    <select class="weui-select" name="nationType">
+		                        <option value="1">中国</option>
+		                        <option value="2">美国</option>
+		                        <option value="3">英国</option>
+		                    </select>
+		                </div>
+		            </div>
+		            <div class="weui-cell weui-cell_select weui-cell_select-after">
+		                <div class="weui-cell__hd">
+		                    <label for="" class="weui-label">民族</label>
+		                </div>
+		                <div class="weui-cell__bd">
+		                    <select class="weui-select" name="nationalType">
+		                        <option value="1">汉族</option>
+		                        <option value="2">藏族</option>
+		                        <option value="3">壮族</option>
+		                    </select>
+		                </div>
+		            </div>
+		            <div class="weui-cell weui-cell_select weui-cell_select-after">
+		                <div class="weui-cell__hd">
+		                    <label for="" class="weui-label">港澳台侨外</label>
+		                </div>
+		                <div class="weui-cell__bd">
+		                    <select class="weui-select" name="overseaType">
+		                        <option value="1">华侨</option>
+		                        <option value="2">香港</option>
+		                        <option value="3">澳门</option>
+		                        <option value="3">台湾</option>
+		                    </select>
+		                </div>
+		            </div>
+		            <div class="weui-cell">
+		                <div class="weui-cell__hd"><label class="weui-label">出生所在地</label></div>
+		                <div class="weui-cell__bd">
+		                    <input class="weui-input" type="text" name="birthPlace"/>
+		                </div>
+		            </div>
+		            <div class="weui-cells weui-cells_form">
+				      <div class="weui-cell">
+				        <div class="weui-cell__hd"><label for="home-city" class="weui-label">籍贯</label></div>
+				        <div class="weui-cell__bd">
+				          <input class="weui-input" id="home-city" type="text" name="nativePlaceTxt" value="广东省 广州市">
+				          <input type="hidden" id="nativePlaceNo" name="nativePlace">
+				        </div>
+				      </div>
+				    </div>
+		            <div class="weui-cell weui-cell_select weui-cell_select-after">
+		                <div class="weui-cell__hd">
+		                    <label for="" class="weui-label">户口性质</label>
+		                </div>
+		                <div class="weui-cell__bd">
+		                    <select class="weui-select" name="residenceType">
+		                        <option value="1">农业户口</option>
+		                    </select>
+		                </div>
+		            </div>
+		            <div class="weui-cell weui-cell_select weui-cell_select-after">
+		                <div class="weui-cell__hd">
+		                    <label for="" class="weui-label">非农业户口类型</label>
+		                </div>
+		                <div class="weui-cell__bd">
+		                    <select class="weui-select" name="nonAgricultureType">
+		                        <option value="1">城市</option>
+		                    </select>
+		                </div>
+		            </div>
+		            <div class="weui-cell">
+		            	<div class="weui-cell__hd">
+		                    <label for="" class="weui-label">留守儿童</label>
+		                </div>
+		                <div class="weui-cell__bd ys-radio">
+		                	<input type="radio" id="isStay1" name="isStay" value="1"/><label for="isStay1"></label>是
+		                	<input type="radio" id="isStay0" name="isStay" value="0"/><label for="isStay0"></label>否
+		                </div>
+			        </div>
+			        <div class="weui-cell">
+		            	<div class="weui-cell__hd">
+		                    <label for="" class="weui-label">孤儿</label>
+		                </div>
+		                <div class="weui-cell__bd ys-radio">
+		                	<input type="radio" id="isOrphan1" name="isOrphan" value="1"/><label for="isOrphan1"></label>是
+		                	<input type="radio" id="isOrphan0" name="isOrphan" value="0"/><label for="isOrphan0"></label>否
+		                </div>
+			        </div>
+			        <div class="weui-cell">
+		            	<div class="weui-cell__hd">
+		                    <label for="" class="weui-label">残疾幼儿</label>
+		                </div>
+		                <div class="weui-cell__bd ys-radio">
+		                	<input type="radio" id="isDisability1" name="isDisability" value="1"/><label for="isDisability1"></label>是
+		                	<input type="radio" id="isDisability0" name="isDisability" value="0"/><label for="isDisability0"></label>否
+		                </div>
+			        </div>
+			        <div class="weui-cell weui-cell_select weui-cell_select-after">
+		                <div class="weui-cell__hd">
+		                    <label for="" class="weui-label">残疾幼儿类别</label>
+		                </div>
+		                <div class="weui-cell__bd">
+		                    <select class="weui-select" name="disabilityLevel">
+		                        <option value="1">视力残疾</option>
+		                    </select>
+		                </div>
+		            </div>
+			         <div class="weui-cell">
+		            	<div class="weui-cell__hd">
+		                    <label for="" class="weui-label">进城务工人员子女</label>
+		                </div>
+		                <div class="weui-cell__bd ys-radio">
+		                	<input type="radio" id="isCityWorker1" name="isCityWorker" value="1"/><label for="isCityWorker1"></label>是
+		                	<input type="radio" id="isCityWorker0" name="isCityWorker" value="0"/><label for="isCityWorker0"></label>否
+		                </div>
+			        </div>
+				</div>
+			<div>
+			<div class="signUp-bottom">
+				 <a href="javascript:;" class="btn">上一步</a>
+			     <a id="submitBtn" href="javascript:;" class="btn">提交</a>
+			</div>
+        </div>
+        <script src="../../plugins/zepto.min.js"></script>
+        <script src="../../plugins/jquery-weui/jquery-weui.js"></script>
+        <script src="../../plugins/jquery-weui/city-picker.js"></script>
+        <script type="text/javascript">
+        	//籍贯picker
+        	$("#home-city").cityPicker({
+				title: "选择籍贯",
+		        showDistrict: false,
+		        /*onChange: function (picker, values, displayValues) {
+		        	console.log(values, displayValues);
+		        	registerStep2['nativePlace'] = values;
+					localStorage.setItem('registerStep2', JSON.stringify(registerStep2));
+					console.log(localStorage.getItem('registerStep2'));
+		        },*/
+		        onClose: function(picker){
+		        	var value = picker.value.join();
+		        	var displayValue = picker.displayValue.join(' ');
+		        	$('#nativePlaceNo').val(value);
+		        	
+		        	registerStep2['nativePlace'] = value;
+		        	registerStep2['nativePlaceTxt'] = displayValue;
+					localStorage.setItem('registerStep2', JSON.stringify(registerStep2));
+					console.log(localStorage.getItem('registerStep2'));
+		        }
+			});
+			
+			
+			//读取本地存储，填值
+			 var registerStep2 = localStorage.getItem('registerStep2') ? JSON.parse(localStorage.getItem('registerStep2')) : {};
+			 console.log(registerStep2);
+			 for(var key in registerStep2){
+			 	if(key == 'isStay' || key == 'isOrphan' || key == 'isDisability' || key == 'isCityWorker'){
+			 		//单选框不能直接赋值
+			 		var value = registerStep2[key];
+			 		$('#'+ key + value).attr('checked',true);
+			 	}else{
+			 		$('[name="'+ key +'"]').val(registerStep2[key]);
+			 	}
+			 }
+			 
+			
+        	
+			 //失去焦点，信息记录在本地
+			 $('input,select').blur(function(){
+				var key = $(this).attr('name');
+			 	if($(this).attr('type') == 'radio' || $(this).attr('type') == 'checkbox'){
+			 		var value = $(this).val();
+			 	}else{
+				 	var value = $(this).val();
+			 	}
+			 	registerStep2[key] = value;
+				localStorage.setItem('registerStep2', JSON.stringify(registerStep2));
+				console.log(localStorage.getItem('registerStep2'));
+			 });
+			 
+			 
+			 //提交清除本地存储
+			 $('#submitBtn').on('click',function(){
+			 	localStorage.setItem('registerStep2','');
+			 })
+			 
+			 
+        </script>
+	</body>
+</html>

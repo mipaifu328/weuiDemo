@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+    	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title>注册</title>
+		<link rel="stylesheet" type="text/css" href="../../plugins/weui/css/weui.min.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/common.css" />
+		
+		<!-- 表单验证validate -->
+		<link rel="stylesheet" type="text/css" href="../../css/myValidateStyle.css"/>
+		
+		<script src="../../plugins/jquery-validation/lib/jquery.js"></script>
+		<script src="../../plugins/jquery-validation/dist/jquery.validate.min.js"></script>
+		<script src="../../plugins/jquery-validation/dist/additional-methods.js"></script>
+	</head>
+	<body ontouchstart>
+		<header class="header">
+			<a class="header-back"></a>
+			<h1 class="header-title">注册</h1>
+		</header>
+		<div class="container">
+			<form id="registerForm" method="post" action="">
+				<div class="weui-cells">
+					<div class="weui-cell">
+						<div class="weui-cell__hd"><label class="weui-label">身份证姓名</label></div>
+		                <div class="weui-cell__bd">
+		                    <input class="weui-input input-right" name="realName" type="text" placeholder="点击输入身份证姓名"/>
+		                </div>
+					</div>
+					<div class="weui-cell">
+						<div class="weui-cell__hd"><label class="weui-label">身份证号码</label></div>
+		                <div class="weui-cell__bd">
+		                    <input class="weui-input input-right" type="text" name="cid" placeholder="点击输入身份证号码"/>
+		                </div>
+					</div>
+					<div class="weui-cell">
+						<div class="weui-cell__hd"><label class="weui-label">手机号码</label></div>
+		                <div class="weui-cell__bd">
+		                    <input class="weui-input input-right" type="number" name="phone" placeholder="点击输入预留手机号码"/>
+		                </div>
+					</div>
+					<div class="weui-cell weui-cell_vcode">
+		                <div class="weui-cell__hd">
+		                    <label class="weui-label">验证码</label>
+		                </div>
+		                <div class="weui-cell__bd">
+		                    <input class="weui-input" name="vCode"/>
+		                </div>
+		                <div class="weui-cell__ft">
+		                    <button class="weui-vcode-btn" type="button">点击获取验证码</button>
+		                </div>
+		            </div>
+				</div>
+	            <div class="weui-btn-area">
+		            <input class="weui-btn weui-btn_primary" value="注册" type="submit"/>
+		        </div>
+		    </form>
+		</div>
+		<script type="text/javascript">
+			$(function(){
+				$('#registerForm').validate({
+					submitHandler:function(form){
+			            alert("提交事件!");   
+			            form.submit();
+			        }, 
+					rules:{
+						realName:{
+							required: true
+						},
+						cid:{
+							required: true,
+							isIdNum: true
+						},
+						phone:{
+							required: true,
+							isPhone: true
+						},
+						vCode:{
+							required: true,
+						}
+					},
+					messages:{
+						realName:{
+							required: "请输入身份证姓名"
+						},
+						cid:{
+							required: "请输入身份证号码"
+						},
+						phone:{
+							required: "请输入手机号码"
+						},
+						vCode:{
+							required: "请输入验证码"
+						}
+					}
+				});
+			});
+		</script>
+	</body>
+</html>

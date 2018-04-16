@@ -1,0 +1,116 @@
+.weui-panel:first-child{
+	margin-top:10px;
+}
+.dynamic a{
+	display: block;
+}
+.dynamic .weui-panel__hd{
+	display: inline-block;
+	margin-left:15px;
+	padding: 6px 15px;
+	color:#fff;
+	border-radius: 2px;
+	background-color:#c490c0;
+}
+.dynamic .weui-panel__hd:after{
+    border-bottom: 0;
+}
+
+.dynamic .weui-panel__hd.color1{
+	background-color:#f08e6b;
+}
+.dynamic .weui-panel__hd.color2{
+	background-color:#21baa8;
+}
+
+.dynamic .weui-media-box__desc{
+	margin-right: 10px;
+	color:#333;
+	display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+}
+.dynamic .weui-media-box__desc .imgbox{
+	display: block;
+	-webkit-box-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
+    margin-left:5px;
+    width: 33.3333%;
+    height:100%;
+}
+.imgbox img{
+	width: 100%;
+	height: auto%;
+}
+.dynamic .weui-media-box__desc .imgbox:first-child{
+	margin-left:0;
+}
+.dynamic .weui-badge_dot{
+	position: absolute;
+	top:17px;
+	right: 20px;
+}
+.weui-media-box__info__meta.right{
+	float:right;
+	padding-right: 0;
+}
+
+/*动态详情*/
+.content-msg {
+	margin-bottom:10px;
+}
+.content-msg span{
+	margin-right:10px;
+	color:#999;
+}
+.toolbar{
+	margin-top:8px;
+	padding:8px 0;
+	height: 24px;
+	line-height: 24px;
+	background-color:#fff;
+}
+.content p{
+	text-indent: 2em;
+	line-height: 28px;
+}
+.toolbar a{
+	display: block;
+	width: 100%;
+	text-align: center;
+	text-indent: 9%;
+	border-left: 1px solid #eee;
+}
+.toolbar div:first-child a{
+	border-left: none;
+}
+.toolbar .comment{
+	background: url(../images/dynamic/comment.png) 30% center no-repeat;
+	background-size: 16px;
+}
+.toolbar .liked{
+	background: url(../images/dynamic/liked.png) 30% center no-repeat;
+	background-size: 16px;
+}
+.toolbar .problem{
+	background: url(../images/dynamic/problem.png) 30% center no-repeat;
+	background-size: 16px;
+}
+.toolbar .comment:active{
+	color:#21BAA8;
+	background: url(../images/dynamic/comment_on.png) 30% center no-repeat;
+	background-size: 16px;
+}
+.toolbar .liked:active,
+.toolbar .liked.on{
+	color:#21BAA8;
+	background: url(../images/dynamic/liked_on.png) 30% center no-repeat;
+	background-size: 16px;
+}
+.toolbar .problem:active{
+	color:#21BAA8;
+	background: url(../images/dynamic/problem_on.png) 30% center no-repeat;
+	background-size: 16px;
+}
+

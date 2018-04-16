@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+    	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title>园务</title>
+		<link rel="stylesheet" type="text/css" href="../../plugins/weui/css/weui.min.css" />
+		<link rel="stylesheet" type="text/css" href="../../plugins/swiper/css/swiper.min.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/common.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/index.css" />
+	</head>
+	<body ontouchstart>
+		<header class="header">
+			<select class="header-left">
+				<option value ="volvo">小二班 张小小</option>
+				<option value ="saab">小一班 小新</option>
+			</select>
+			<i class="icon-down"></i>
+			<h1 class="header-title">园务</h1>
+			<a class="header-right">切换家长</a>
+		</header>
+		<div class="container">
+	        <div class="weui-tab">
+	            <div class="weui-tab__panel">
+		        	<div class="swiper-container">
+					    <div class="swiper-wrapper">
+					        <div class="swiper-slide">
+					        	<img src="../../images/index/siper_demo.png" />
+					        </div>
+					    </div>
+					    <div class="swiper-pagination"></div>
+					</div>
+					<a class="wesite-link" href="../parent/website.html" >微官网</a>
+					<div class="weui-cell notice">
+						<div class="notice-title">通知公告<i class="icon-inform"></i></div>
+						<div class="marquee">
+						  <div class="get-marquee-width">
+						    <div class="marquee-move">
+						    <!-- 这里的span 仅仅是为了获得问题内容的长度用的,也可以换成其他的行内元素-->
+						     <span>我是一个很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长的标题</span>
+						    </div>
+						  </div>
+						</div>
+					</div>
+	            	<!-- 九宫格 -->
+					<div class="weui-grids">
+				        <a href="mail.html" class="weui-grid">
+				            <div class="weui-grid__icon">
+				                <img src="../../images/index/icon_mail.png" alt="">
+				            </div>
+				            <p class="weui-grid__label">我的信箱</p>
+				        </a>
+				        <a href="apply.html" class="weui-grid">
+				            <div class="weui-grid__icon">
+				                <img src="../../images/index/icon_apply.png" alt="">
+				            </div>
+				            <p class="weui-grid__label">我的审批</p>
+				        </a>
+				        <a href="attendance.html" class="weui-grid">
+				            <div class="weui-grid__icon">
+				                <img src="../../images/index/icon_attendance.png" alt="">
+				            </div>
+				            <p class="weui-grid__label">考勤率</p>
+				        </a>
+				        <a href="../parent/contact.html" class="weui-grid">
+				            <div class="weui-grid__icon">
+				                <img src="../../images/index/icon_contact1.png" alt="">
+				            </div>
+				            <p class="weui-grid__label">通讯录</p>
+				        </a>
+				        <a href="plan.html" class="weui-grid">
+				            <div class="weui-grid__icon">
+				                <img src="../../images/index/icon_plan.png" alt="">
+				            </div>
+				            <p class="weui-grid__label">计划管理</p>
+				        </a>
+				        <a href="../parent/food.html" class="weui-grid">
+				            <div class="weui-grid__icon">
+				                <img src="../../images/index/icon_food.png" alt="">
+				            </div>
+				            <p class="weui-grid__label">膳食查询</p>
+				        </a>
+				        <a href="live.html" class="weui-grid">
+				            <div class="weui-grid__icon">
+				                <img src="../../images/index/icon_live.png" alt="">
+				            </div>
+				            <p class="weui-grid__label">班级直播</p>
+				        </a>
+				    </div>
+	            </div>
+	            <!-- 底部tabbar -->
+	            <div class="weui-tabbar">
+	                <a href="javascript:;" class="weui-tabbar__item">
+	                    <i class="weui-tabbar__icon icon-school"></i>
+	                    <p class="weui-tabbar__label">校园</p>
+	                </a>
+	                <a href="../parent/dynamic.html" class="weui-tabbar__item">
+	                	<span style="display: inline-block;position: relative;">
+	                    	<i class="weui-tabbar__icon icon-dynamic"></i>
+	                    	<span class="weui-badge" style="position: absolute;top: -2px;right: -13px;">8</span>
+	                    </span>
+	                    <p class="weui-tabbar__label">动态</p>
+	                </a>
+	                <a href="javascript:;" class="weui-tabbar__item  weui-bar__item_on">
+	                    <i class="weui-tabbar__icon icon-work"></i>
+	                    <p class="weui-tabbar__label">园务</p>
+	                </a>
+	                <a href="javascript:;" class="weui-tabbar__item">
+	                    <span style="display: inline-block;position: relative;">
+	                    	<i class="weui-tabbar__icon icon-myself"></i>
+	                    	<span class="weui-badge weui-badge_dot" style="position: absolute;top: 0;right: -6px;"></span>
+	                    </span>
+	                    <p class="weui-tabbar__label">我的</p>
+	                </a>
+	            </div>
+	        </div>
+    	</div>
+		<script src="../../plugins/zepto.min.js" ></script>
+		<script src="../../plugins/weui/js/weui.min.js" ></script>
+		<script src="../../plugins/swiper/js/swiper.jquery.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+		        //图片轮播
+		        var mySwiper = new Swiper('.swiper-container', {
+					autoplay: 5000,//可选选项，自动滑动
+					loop:true,
+					pagination: '.swiper-pagination',
+        			paginationClickable: true
+				})
+		        
+		        //通知公告
+		        $(".get-marquee-width").width($(".marquee-move span").width());
+		        if($('.marquee').width() > $(".marquee-move span").width()){
+		        	$('.marquee-move').removeClass('marquee-move');
+		        }
+		        
+		        //底部tab切换
+		        $('.weui-tabbar__item').on('click', function () {
+		            $(this).addClass('weui-bar__item_on').siblings('.weui-bar__item_on').removeClass('weui-bar__item_on');
+		        });
+		    });
+		</script>
+	</body>
+</html>

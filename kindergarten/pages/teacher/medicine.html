@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+    	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title>药嘱确认</title>
+		<link rel="stylesheet" type="text/css" href="../../plugins/weui/css/weui.min.css" />
+		<script src="../../plugins/jquery-2.1.4.js"></script>
+		<script src="../../plugins/weui/js/weui.min.js" ></script>
+		<!-- check -->
+	    <link rel="stylesheet" type="text/css" href="../../plugins/icheck/skins/all.css"/>
+	    <script src="../../plugins/icheck/icheck.min.js"></script>
+	    
+		<link rel="stylesheet" type="text/css" href="../../css/common.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/teacher/medicine.css"/>
+	</head>
+	<body ontouchstart>
+		<header class="header">
+			<a class="header-back"></a>
+			<h1 class="header-title">收药确认</h1>
+			<a class="header-right"></a>
+		</header>
+		<div class="container">
+			<div class="medicine-top">
+				今天需要收药<span class="medicine-color">0/4</span>份
+				<a class="btn">确认收药</a>
+			</div>
+			<div class="medicine-list">
+				<div class="medicine-list-items">
+					<img src="../../images/index/icon_medicine.png" />
+					<div>
+						<h3>小一班 小麦兜</h3>
+						<p>我是备注备注备注备注备注备注备注备注备注</p>
+						<a class="btn">确认收药</a>
+						<div class="medicine-check"><input type="checkbox"/></div>
+					</div>
+				</div>
+				<div class="medicine-list-items">
+					<img src="../../images/index/icon_medicine.png" />
+					<div>
+						<h3>小一班 小麦兜</h3>
+						<p>我是备注备注备注备注备注备注备注备注备注</p>
+						<a class="btn">确认收药</a>
+						<div class="medicine-check"><input type="checkbox"/></div>
+					</div>
+				</div>
+				<div class="medicine-list-items">
+					<img src="../../images/index/icon_medicine.png" />
+					<div>
+						<h3>小一班 小麦兜</h3>
+						<p>我是备注备注备注备注备注备注备注备注备注</p>
+						<a class="btn">确认收药</a>
+						<div class="medicine-check"><input type="checkbox"/></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$('input').iCheck({
+					checkboxClass: 'icheckbox_flat-green',
+				    radioClass: 'iradio_flat-green',
+				    increaseArea: '20%' // optional
+				});
+			});
+    	</script>
+	</body>
+</html>

@@ -1,0 +1,21 @@
+.calendar{
+	width: 100%;
+	height: 290px;
+}
+.layui-laydate-static,
+.layui-laydate-static .layui-laydate-main,
+.layui-laydate-content table{
+	width:100%;
+}
+
+.layui-laydate.layui-laydate-static{
+	border:none;
+}
+
+.layui-laydate.layui-laydate-static .layui-this {
+    background-color: #21BAA8!important;
+}
+.layui-laydate-footer{
+	display: none;
+}
+

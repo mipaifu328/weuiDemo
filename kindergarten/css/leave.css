@@ -1,0 +1,37 @@
+.container{
+	overflow-y:auto;
+}
+.weui-label{
+	width: 80px;
+}
+.weui-input{
+	text-align: right;
+}
+.weui-cell{
+	position: relative;
+}
+.date-right{
+	display: inline;
+	position: absolute;
+	top:10px;
+	right: 0px;
+	text-align: right;
+}
+.weui-select{
+	direction: rtl;
+}
+.weui-cell_select .weui-cell__bd:after{
+	
+    content: " ";
+    display: inline-block;
+    border: none;
+    -webkit-transform: none;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid #21baa8;
+    /*border-color: #21baa8;
+    -webkit-transform: matrix(-0.71, 0.71, -0.71, -0.71, 0, 0);
+    transform: matrix(-0.71, 0.71, -0.71, -0.71, 0, 0);*/
+}

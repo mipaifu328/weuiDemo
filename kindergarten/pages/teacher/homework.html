@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+    	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title>布置作业</title>
+		<link rel="stylesheet" type="text/css" href="../../plugins/weui/css/weui.min.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/common.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/apply.css"/>
+	</head>
+	<body ontouchstart>
+		<header class="header">
+			<a class="header-back"></a>
+			<h1 class="header-title">布置作业</h1>
+		</header>
+		<div class="container">
+			<div class="apply-input">
+				<input type="text" placeholder="作业题目" />
+				<input type="text" placeholder="小一班" />
+				<input type="date" id="date" placeholder="截止日期" />
+			</div>
+			<div class="apply-box">
+				<textarea class="weui-textarea" placeholder="作业内容" rows="5"></textarea>
+			</div>
+			<div class="apply-box">
+				<div class="weui-cells weui-cells_form" id="uploader">
+					<div class="weui-cell">
+					    <div class="weui-cell__bd">
+					        <div class="weui-uploader">
+					            <div class="weui-uploader__hd">
+					                <p class="weui-uploader__title">上传图片</p>
+					            </div>
+					            <div class="weui-uploader__bd">
+					                <ul class="weui-uploader__files" id="uploaderFiles"></ul>
+					                <div class="weui-uploader__input-box">
+					                    <input id="uploaderInput" class="weui-uploader__input" type="file" accept="image/*" capture="camera" multiple="" />
+					                </div>
+					            </div>
+					        </div>
+					    </div>
+					</div>
+				</div>
+			</div>
+			<div class="weui-btn-area">
+				<a class="weui-btn weui-btn_primary">提交</a>
+			</div>
+		</div>
+		<script src="../../plugins/jquery-2.1.4.js"></script>
+		<script type="text/javascript">
+			//日期placeholder
+			$("#date").on("input",function(){
+				if($(this).val().length>0){
+					$(this).addClass("full");
+				}else{
+					$(this).removeClass("full");
+				}
+			});
+		</script>
+	</body>
+</html>

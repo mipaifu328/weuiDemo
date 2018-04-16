@@ -1,0 +1,76 @@
+.container{
+	overflow-y: auto;
+}
+.attendance-title{
+	line-height: 44px;
+	font-size: 16px;
+	text-align: center;
+	border-bottom: 1px solid #ededed;
+}
+.attendance-content{
+	padding: 10px 15px;
+}
+.attendance-color{
+	margin-right: 6px;
+	font-size: 16px;
+	color:#21BAA8;
+}
+.attendance-content-top{
+	position: relative;
+	line-height: 28px;
+	font-size: 16px;
+}
+.btn{
+	position: absolute;
+	top:0;
+	right:0;
+	display: block;
+	width: 70px;
+	height: 24px;
+	line-height: 24px;
+	text-align: center;
+	font-size: 14px;
+	color:#21baa8;
+	background: #fff;;
+	border:1px solid #21baa8;
+	border-radius: 14px;
+}
+.btn:visited{
+  color:#FFFFFF;
+}
+.btn:active{
+  color:rgba(255, 255, 255, 0.6);
+  background-color:#1b9588;
+}
+
+.attendance-check{
+	margin:10px 0;
+	overflow: hidden;
+}
+
+.attendance-check-box{
+	float: left;
+	width: 32%;
+	margin-top:10px;
+	border:1px solid #d5e6e0;
+	margin-right:2%;
+	box-sizing: border-box;
+}
+.attendance-check-box:nth-of-type(3n+0){
+	margin-right:0;
+}
+.attendance-check-box img{
+	display: block;
+	width: 100%;
+}
+.check-box-bottom{
+	position: relative;
+	text-align: center;
+	line-height: 25px;
+	padding-right: 28px;
+}
+.check-box-bottom > div{
+	position: absolute;
+	top:2px;
+	right: 4px;
+}

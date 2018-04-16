@@ -1,0 +1,60 @@
+.container{
+	padding: 15px;
+	overflow-y: auto;
+	background-color: #fff;
+}
+.homework-content{
+	padding: 10px;
+	border: 1px solid #eee;
+}
+.homework-content p{
+	margin-top:10px;
+	color:#21BAA8;
+}
+.homework-content img{
+	display: block;
+	max-width: 100%;
+	margin: 10px 0;
+	border: 1px solid #eee;
+}
+
+.homework-content-bottom{
+	position: relative;
+	color:#999;
+}
+.homework-content-bottom .btn{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	display: block;
+	width: 60px;
+	height: 24px;
+	line-height: 24px;
+	text-align: center;
+	font-size: 14px;
+	color:#21baa8;
+	background: #fff;;
+	border:1px solid #21baa8;
+	border-radius: 12px;
+}
+.homework-content-bottom .btn:visited{
+  color:#FFFFFF;
+}
+.homework-content-bottom .btn:active{
+  color:rgba(255, 255, 255, 0.6);
+  background-color:#1b9588;
+}
+
+.homework-answer{
+	margin:10px 0;
+	padding: 10px;
+	border: 1px solid #eee;
+}
+
+.weui-cells{
+	margin-bottom:20px;
+}
+.weui-cell{
+	padding:4px 10px;
+	border: 1px solid #eee;
+}

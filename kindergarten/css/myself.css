@@ -1,0 +1,94 @@
+/*头像信息*/
+.inform-box{
+	width: 100%;
+	height: 150px;
+	background: url(../images/myself/inform_bg.png) no-repeat;
+	background-size: 100% 100%;
+	display:flex;
+	align-items:center;/*垂直居中*/
+	justify-content: center;/*水平居中*/
+	flex-direction:column;
+}
+.inform-box img{
+	width:80px;
+	height:80px;
+	border-radius:40px ;
+	border:2px solid #c1e9f0;
+}
+.inform-box .inform-name{
+	color: #21baa8;
+	padding-right:16px;
+	background:url(../images/myself/inform-icon.png) no-repeat right center;
+	background-size:12px 8px;
+	background-color: transparent;
+	border: none;
+	outline: 0;
+	-webkit-appearance: none;
+}
+/*grid*/
+.myself{
+	margin-top:6px;
+	background-color:#fff;
+}
+.myself .weui-grid{
+	width:50%;
+	padding: 10px 15px;
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+.myself p{
+	line-height: 1.47058824;
+    font-size: 17px;
+}
+
+/*图标*/
+.ys-icon{
+	display:block;
+	margin-right:5px;
+	width:36px;
+}
+
+
+/*个人信息页面*/
+.change-box{
+	position: relative;
+	width:78px;
+	height: 24px;
+}
+.change-btn{
+	display: block;
+	width:100%;
+	height: 100%;
+	line-height: 24px;
+	text-align: center;
+	color: #21baa8;
+	border: 1px solid #21baa8;
+	border-radius: 12px;
+	box-sizing: border-box;
+}
+
+.change-btn:visited{
+  color:#FFFFFF;
+}
+.change-btn:active{
+  color:rgba(255, 255, 255, 0.6);
+  background-color:#1b9588;
+}
+
+.weui-label{
+	width:80px;
+	color:#333;
+}
+.ys-radio,
+.weui-input,
+.date-picker{
+	text-align: right;
+}
+.weui-select{
+	direction: rtl;
+}

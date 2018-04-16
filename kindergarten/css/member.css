@@ -1,0 +1,63 @@
+.weui-panel{
+	padding:10px;
+}
+.weui-panel:first-child{
+	margin-top: 10px;
+}
+.member-msg{
+	position: relative;
+}
+.member-msg img{
+	display: block;
+	float: left;
+	width: 90px;
+	height: 90px;
+	border-radius: 45px;
+}
+.member-msg-content{
+	float: left;
+	margin-left:10px;
+	line-height: 30px;
+}
+.member-msg .flag{
+	color:#21BAA8;
+}
+.msg-tip{
+	position:absolute;
+	top:4px;
+	right: 0;
+	color:#21BAA8;
+}
+.msg-tip .weui-icon-info-circle{
+	color:#21BAA8;
+	font-size: 18px;
+}
+.member-toolbar{
+	clear: both;
+	display: flex;
+}
+.member-toolbar>div{
+	padding:0 5%;
+}
+.btn{
+	display: block;
+	float:left;
+	width: 100%;
+	margin-top:10px;
+	padding:1.5% 0;
+	line-height: 24px;
+	font-size: 14px;
+	font-weight: normal;
+	text-align: center;
+	color: #21baa8;
+	border: 1px solid #21baa8;
+	box-sizing: border-box;
+}
+
+.btn:visited{
+  color:#FFFFFF;
+}
+.btn:active{
+  color:rgba(255, 255, 255, 0.6);
+  background-color:#1b9588;
+}

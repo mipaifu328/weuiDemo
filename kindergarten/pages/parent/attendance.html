@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+    	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title>考勤记录</title>
+		<link rel="stylesheet" type="text/css" href="../../plugins/weui/css/weui.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/common.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/attendance.css"/>
+	</head>
+	<body ontouchstart>
+		<header class="header">
+			<a class="header-back"></a>
+			<h1 class="header-title">考勤记录</h1>
+		</header>
+		<div class="container">
+			<div class="attendance-top">
+				9月到园情况：<br />
+				共考勤<span class="number">10</span>次，迟到<span class="number">1</span>次，请假<span class="number">1</span>次
+			</div>
+			<div class="attendance-content">
+				<div class="attendance-content-header">
+					<input type="month" class="date-box"/>
+					<div class="txt-box">到园 - 离园</div>
+				</div>
+				<table>
+					<tbody>
+						<tr>
+							<td>4</td>
+							<td>星期一</td>
+							<td>07:00 - 16:00</td>
+						</tr>
+						<tr>
+							<td>5</td>
+							<td>星期二</td>
+							<td>07:00 - 16:00</td>
+						</tr>
+						<tr>
+							<td>6</td>
+							<td>星期三</td>
+							<td>07:00 - 16:00</td>
+						</tr>
+						<tr>
+							<td>7</td>
+							<td>星期四</td>
+							<td><span class="problem">08:00</span> - 16:00</td>
+						</tr>
+						<tr>
+							<td>8</td>
+							<td>星期五</td>
+							<td><span class="problem">请假</span></td>
+						</tr>
+						<tr>
+							<td>4</td>
+							<td>星期一</td>
+							<td>07:00 - 16:00</td>
+						</tr>
+						<tr>
+							<td>5</td>
+							<td>星期二</td>
+							<td>07:00 - 16:00</td>
+						</tr>
+						<tr>
+							<td>6</td>
+							<td>星期三</td>
+							<td>07:00 - 16:00</td>
+						</tr>
+						<tr>
+							<td>7</td>
+							<td>星期四</td>
+							<td><span class="problem">08:00</span> - 16:00</td>
+						</tr>
+						<tr>
+							<td>8</td>
+							<td>星期五</td>
+							<td><span class="problem">请假</span></td>
+						</tr>
+					</tbody>
+				</table>
+				<a class="weui-btn weui-btn_primary">更多</a>
+			</div>
+        </div>
+        <script src="../../plugins/zepto.min.js" ></script>
+        <script src="../../plugins/weui/js/weui.min.js" ></script>
+        <script type="text/javascript">
+			$(function(){
+		        
+		    });
+		</script>
+	</body>
+</html>

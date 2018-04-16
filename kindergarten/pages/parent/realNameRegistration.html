@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+    	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title>实名注册</title>
+		<link rel="stylesheet" type="text/css" href="../../plugins/weui/css/weui.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/common.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/realNameRegistration.css"/>
+		
+		<script type="text/javascript" src="../../plugins/weui/js/weui.min.js" ></script>
+		
+		<!-- 表单验证validate -->
+		<link rel="stylesheet" type="text/css" href="../../css/myValidateStyle.css"/>
+		
+		<script src="../../plugins/jquery-validation/lib/jquery.js"></script>
+		<script src="../../plugins/jquery-validation/dist/jquery.validate.min.js"></script>
+		<script src="../../plugins/jquery-validation/dist/additional-methods.js"></script>
+	</head>
+	<body ontouchstart>
+		<header class="header">
+			<a class="header-back"></a>
+			<h1 class="header-title">实名注册</h1>
+		</header>
+		<div class="container">
+			<form id="realNameForm" method="post" action="">
+				<div class="weui-cells">
+					<div class="weui-cell">
+						<div class="weui-cell__hd"><label class="weui-label">身份证姓名</label></div>
+		                <div class="weui-cell__bd">
+		                    <input class="weui-input" name="realName" type="text"/>
+		                </div>
+					</div>
+					<div class="weui-cell">
+						<div class="weui-cell__hd"><label class="weui-label">身份证号码</label></div>
+		                <div class="weui-cell__bd">
+		                    <input class="weui-input" name="cid" type="text"/>
+		                </div>
+					</div>
+					<div class="weui-cell">
+						<div class="weui-cell__hd"><label class="weui-label">手机号码</label></div>
+		                <div class="weui-cell__bd">
+		                    <input class="weui-input" name="phone" type="number"/>
+		                </div>
+					</div>
+					<!--<div class="weui-cells weui-cells_form" id="uploader">
+					     <div class="weui-cell">
+					         <div class="weui-cell__bd">
+					             <div class="weui-uploader">
+					                 <div class="weui-uploader__hd">
+					                     <p class="weui-uploader__title">图片上传</p>
+					                     <div class="weui-uploader__info"><span id="uploadCount">0</span>/5</div>
+					                 </div>
+					                 <div class="weui-uploader__bd">
+					                     <ul class="weui-uploader__files" id="uploaderFiles"></ul>
+					                     <div class="weui-uploader__input-box">
+					                         <input id="uploaderInput" class="weui-uploader__input" type="file" accept="image/*" capture="camera" multiple="" />
+					                     </div>
+					                 </div>
+					             </div>
+					         </div>
+					     </div>
+					 </div>-->
+					<div class="weui-cell">
+						<div class="upload-img" id="obverseUploader">
+							<ul class="weui-uploader__files" id="obverseUploaderList"></ul>
+							<input class="weui-uploader__input" type="file" accept="image/*"/>
+							<i class='upload-img-icon'></i>点击上传身份证正面
+						</div>
+					</div>
+					<div class="weui-cell">
+						<div class="upload-img" id="reverseUploader">
+							<ul class="weui-uploader__files" id="reverseUploaderList"></ul>
+							<input class="weui-uploader__input" type="file" accept="image/*"/>
+							<i class='upload-img-icon'></i>点击上传身份证反面
+						</div>
+					</div>
+					<div class="weui-cell weui-cell_vcode">
+		                <div class="weui-cell__hd">
+		                    <label class="weui-label">验证码</label>
+		                </div>
+		                <div class="weui-cell__bd">
+		                    <input class="weui-input"/>
+		                </div>
+		                <div class="weui-cell__ft">
+		                    <button class="weui-vcode-btn">点击获取验证码</button>
+		                </div>
+		            </div>
+				</div>
+	            <div class="weui-btn-area">
+		            <input type="submit" class="weui-btn weui-btn_primary" value="提交" />
+		        </div>
+			</form>
+		</div>
+		<script type="text/javascript">
+			//身份证正面
+			weui.uploader('#obverseUploader', {
+			   url: 'http://localhost:8081',
+			   auto: true,
+			   type: 'file',
+			   fileVal: 'fileVal',
+			   compress: {
+			       width: 1600,
+			       height: 1600,
+			       quality: .8
+			   },
+			   onBeforeQueued: function(files) {
+			       // `this` 是轮询到的文件, `files` 是所有文件
+			
+			       if(["image/jpg", "image/jpeg", "image/png", "image/gif"].indexOf(this.type) < 0){
+			           weui.alert('请上传图片');
+			           return false; // 阻止文件添加
+			       }
+			       if(this.size > 10 * 1024 * 1024){
+			           weui.alert('请上传不超过10M的图片');
+			           return false;
+			       }
+			
+			       // return true; // 阻止默认行为，不插入预览图的框架
+			   },
+			   onQueued: function(){
+			   	   //只显示上传的第一张
+			   	   var uploader_lists = document.querySelectorAll('#obverseUploaderList li');
+			   	   if(uploader_lists.length > 1){
+			   	   	document.getElementById('obverseUploaderList').removeChild(uploader_lists[0]);
+			   	   }
+			   	   
+			       console.log(this);
+			
+			       // console.log(this.status); // 文件的状态：'ready', 'progress', 'success', 'fail'
+			       // console.log(this.base64); // 如果是base64上传，file.base64可以获得文件的base64
+			
+			       // this.upload(); // 如果是手动上传，这里可以通过调用upload来实现；也可以用它来实现重传。
+			       // this.stop(); // 中断上传
+			
+			       // return true; // 阻止默认行为，不显示预览图的图像
+			   },
+			   onBeforeSend: function(data, headers){
+			       console.log(this, data, headers);
+			       // $.extend(data, { test: 1 }); // 可以扩展此对象来控制上传参数
+			       // $.extend(headers, { Origin: 'http://127.0.0.1' }); // 可以扩展此对象来控制上传头部
+			
+			       // return false; // 阻止文件上传
+			   },
+			   onProgress: function(procent){
+			       console.log(this, procent);
+			       // return true; // 阻止默认行为，不使用默认的进度显示
+			   },
+			   onSuccess: function (ret) {
+			       console.log(this, ret);
+			       // return true; // 阻止默认行为，不使用默认的成功态
+			   },
+			   onError: function(err){
+			       console.log(this, err);
+			       // return true; // 阻止默认行为，不使用默认的失败态
+			   }
+			});
+			
+			//身份证反面
+			weui.uploader('#reverseUploader', {
+			   url: 'http://localhost:8081',
+			   auto: true,
+			   type: 'file',
+			   fileVal: 'fileVal',
+			   compress: {
+			       width: 1600,
+			       height: 1600,
+			       quality: .8
+			   },
+			   onBeforeQueued: function(files) {
+			       // `this` 是轮询到的文件, `files` 是所有文件
+			
+			       if(["image/jpg", "image/jpeg", "image/png", "image/gif"].indexOf(this.type) < 0){
+			           weui.alert('请上传图片');
+			           return false; // 阻止文件添加
+			       }
+			       if(this.size > 10 * 1024 * 1024){
+			           weui.alert('请上传不超过10M的图片');
+			           return false;
+			       }
+			
+			       // return true; // 阻止默认行为，不插入预览图的框架
+			   },
+			   onQueued: function(){
+			   	   //只显示上传的第一张
+			   	   var uploader_lists = document.querySelectorAll('#reverseUploaderList li');
+			   	   if(uploader_lists.length > 1){
+			   	   	document.getElementById('reverseUploaderList').removeChild(uploader_lists[0]);
+			   	   }
+			   	   
+			       console.log(this);
+			
+			       // console.log(this.status); // 文件的状态：'ready', 'progress', 'success', 'fail'
+			       // console.log(this.base64); // 如果是base64上传，file.base64可以获得文件的base64
+			
+			       // this.upload(); // 如果是手动上传，这里可以通过调用upload来实现；也可以用它来实现重传。
+			       // this.stop(); // 中断上传
+			
+			       // return true; // 阻止默认行为，不显示预览图的图像
+			   },
+			   onBeforeSend: function(data, headers){
+			       console.log(this, data, headers);
+			       // $.extend(data, { test: 1 }); // 可以扩展此对象来控制上传参数
+			       // $.extend(headers, { Origin: 'http://127.0.0.1' }); // 可以扩展此对象来控制上传头部
+			
+			       // return false; // 阻止文件上传
+			   },
+			   onProgress: function(procent){
+			       console.log(this, procent);
+			       // return true; // 阻止默认行为，不使用默认的进度显示
+			   },
+			   onSuccess: function (ret) {
+			       console.log(this, ret);
+			       // return true; // 阻止默认行为，不使用默认的成功态
+			   },
+			   onError: function(err){
+			       console.log(this, err);
+			       // return true; // 阻止默认行为，不使用默认的失败态
+			   }
+			});
+			
+			//表单验证
+			$('#realNameForm').validate({
+					rules:{
+						realName:{
+							required: true
+						},
+						cid:{
+							required: true,
+							isIdNum: true
+						},
+						phone:{
+							required: true,
+							isPhone: true
+						}
+					},
+					messages:{
+						realName:{
+							required: "请输入身份证姓名"
+						},
+						cid:{
+							required: "请输入身份证号码"
+						},
+						phone:{
+							required: "请输入手机号码"
+						}
+					}
+				});
+		</script>
+	</body>
+</html>

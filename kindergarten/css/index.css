@@ -1,0 +1,85 @@
+body{
+	background-color: #fff;
+}
+/*图片轮播*/
+.swiper-container{
+	width:100%;
+	max-height: 156px;
+}
+.swiper-container img{
+	width: 100%;
+	max-height: 156px;
+}
+.weui-tab__panel{
+	position: relative;
+}
+.wesite-link{
+	position: absolute;
+	top:10px;
+	right: 10px;
+	display: block;
+	width: 60px;
+	height: 30px;	
+	text-align: center;
+	color:#fff;
+	line-height: 30px;
+	border-radius: 15px;
+	background: rgba(0, 0, 0, 0.6);
+	z-index: 3;
+}
+
+/*通知公告滚动*/
+.notice{
+	padding: 4px 10px;
+}
+.notice-title{
+	width:120px;
+	color:#fc7762;
+}
+.icon-inform{
+	margin-left:4px;
+	display: inline-block;
+	width: 18px;
+	height: 15px;
+	background: url(../images/index/icon_inform.png) no-repeat;
+	background-size:100% 100%;
+}
+.marquee{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: 25px;
+}
+.marquee > .get-marquee-width{
+    position: relative;
+}
+.marquee> .get-marquee-width > .marquee-move{
+    -webkit-animation:  marquee 20s linear 1s infinite;
+    -o-animation:  marquee 20s linear 1s infinite;
+    animation:  marquee 20s linear 1s infinite;
+    position: absolute;
+    width:100%;
+    white-space: nowrap;
+}
+
+@-webkit-keyframes marquee {
+    0% { left: 0; }
+    5%{left: 0;}
+    100% { left: -100%; }
+}
+@-moz-keyframes marquee {
+    0% { left: 0; }
+    5%{left: 0;}
+    100% { left: -100%; }
+}
+@-o-keyframes marquee {
+    0% { left: 0; }
+    5%{left: 0;}
+    100% { left: -100%; }
+}
+@keyframes marquee {
+    0% { left: 0; }
+    5%{left: 0;}
+    100% { left: -100%; }
+}
+

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+    	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title>动态详情</title>
+		<link rel="stylesheet" type="text/css" href="../../plugins/weui/css/weui.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/common.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/dynamic.css"/>
+	</head>
+	<body ontouchstart>
+		<header class="header">
+			<a class="header-back"></a>
+			<h1 class="header-title">动态详情</h1>
+		</header>
+		<div class="container comment">
+			<div class="weui-panel content">
+                <div class="weui-media-box weui-media-box_text">
+                    <h4 class="weui-media-box__title">《放假通知》</h4>
+                    <div class="content-msg">
+                    	<span>园长</span>
+                    	<span>2017-10-11 16:30</span>
+                    </div>
+                    <p>大家好，中秋及国庆佳节即将来临，根据国务院办公厅通知精神，现将2017年中秋节、国庆节放假安排通知如下：10月1日至8日放假调休，共8天，9月30日（星期六）上班。</p>
+                </div>
+	        </div>
+	        <div class="weui-flex toolbar">
+	            <div class="weui-flex__item"><a class="comment" id="comment">评论</a></div>
+	            <div class="weui-flex__item"><a class="liked">点赞</a></div>
+	            <div class="weui-flex__item"><a class="problem">疑问</a></div>
+	        </div>
+        </div>
+        
+        <footer id="footer">
+			<a class="footer-left"></a>
+			<div class="footer-center">
+				<textarea type="text" class="input-text"></textarea>
+			</div>
+			<a for="" class="footer-right">评论</a>
+		</footer>
+        <script src="../../plugins/zepto.min.js" ></script>
+        <script src="../../plugins/weui/js/weui.min.js" ></script>
+        <script type="text/javascript">
+			$(function(){
+				
+				//评论
+		        $('#footer').hide();
+		        $('#comment').on('click',function(){
+		        	$('#footer').show();
+		        });
+		        $('.footer-right').on('click',function(){
+		        	$('#footer').hide();
+		        });
+		        
+		        //点赞
+		        $('.liked').on('click',function(){
+		        	if($(this).hasClass('on')){
+		        		$(this).removeClass('on');
+		        	}else{
+		        		$(this).addClass('on');
+		        	}
+		        });
+		    });
+		</script>
+	</body>
+</html>

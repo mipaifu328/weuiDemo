@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+    	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title>相册详情</title>
+		<link rel="stylesheet" type="text/css" href="../../plugins/weui/css/weui.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/common.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/album.css"/>
+	</head>
+	<body ontouchstart>
+		<header class="header">
+			<a class="header-back"></a>
+			<h1 class="header-title">相册详情</h1>
+		</header>
+		<div class="container comment">
+			<div class="weui-panel album-content">
+				<div class="album-content-title">
+					<h3>六一儿童节</h3>
+					<span>2017-06-02 14:11</span>
+				</div>
+				<p>小一班六一活动照片</p>
+				<ul>
+					<li><img src="../../images/enrollment/home.png" data-id="123"></li>
+					<li><img src="../../images/enrollment/cost.png"></li>
+					<li><img src="../../images/enrollment/instruction.png"></li>
+					<li><img src="../../images/enrollment/main.png"></li>
+				</ul>
+				<div class="album-content-toolbar">
+					<a href="#" class="collect"></a>
+					<a href="#" class="comment"></a>
+				</div>
+			</div>
+        </div>
+        <footer>
+			<a class="footer-left"></a>
+			<div class="footer-center">
+				<textarea type="text" class="input-text"></textarea>
+			</div>
+			<a for="" class="footer-right">评论</a>
+		</footer>
+        <script src="../../plugins/zepto.min.js" ></script>
+        <script src="../../plugins/weui/js/weui.min.js" ></script>
+        <script type="text/javascript">
+			$(function(){
+				//点击查看图片
+		        $('.album-content').on('click','img',function(){
+		        	var dataId = $(this).attr('data-id');
+		        	var gallery = weui.gallery(this.src, {
+						className: 'custom-classname',
+						onDelete: function(){
+							console.log(dataId);
+							if(confirm('确定删除该图片？')){ console.log('删除'); }
+							gallery.hide(function() {
+								console.log('`gallery` has been hidden');
+							});
+						}
+					});
+		        });
+		    });
+		</script>
+	</body>
+</html>

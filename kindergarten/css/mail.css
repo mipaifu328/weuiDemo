@@ -1,0 +1,71 @@
+/*园长信箱*/
+.weui-search-bar{
+	background-color: #fff;
+}
+.weui-search-bar__label,
+.weui-search-bar__box{
+	background-color:#F5F5F5;
+}
+.weui-search-bar__cancel-btn{
+	color:#21BAA8;
+}
+
+.mail-list{
+	background-color: #fff;
+}
+.mail-list img{
+	border-radius: 30px;
+}
+.weui-media-box__title{
+	position: relative;
+}
+.weui-media-box__title .mail-time{
+	position: absolute;
+	top:0;
+	right:0;
+	color:#999;
+	font-size: 14px;
+}
+.weui-media-box__desc{
+	line-height: 24px;
+	-webkit-line-clamp: 1;
+}
+.mail-txt{
+	color:#666;
+}
+.mail-status{
+	color:#999;
+}
+
+/*新建信件*/
+h3{
+	margin: 10px 15px;
+	font-weight: normal;
+}
+.mailNew-box{
+	margin:10px 15px;
+	padding:8px;
+	background-color: #fff;
+	border:1px solid #eee;
+}
+.mailNew-box .weui-cells{
+	margin-top:0;
+}
+.mailNew-box .weui-cell{
+	padding: 0;
+}
+.mailNew-box .weui-uploader__title{
+	font-size: 14px;
+	line-height: 20px;
+}
+.mailNew-box .weui-cells:before,
+.mailNew-box .weui-cells:after{
+	border: none;
+}
+
+.check-box{
+	padding: 0 15px;
+}
+.check-box > div{
+	margin-right: 10px;
+}

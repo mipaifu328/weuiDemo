@@ -1,0 +1,71 @@
+.calendar{
+	position: fixed;
+}
+.food-list{
+	margin-top:293px;
+	padding:0 10px;
+	position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+	overflow-y:auto ;
+	background-color:#fff;
+}
+.food-box{
+	margin-top:10px;
+	padding:10px 0 0 50px;
+	border-bottom: 1px solid #eee;
+}
+.food-box p{
+	color:#999;
+	padding:4px 0;
+}
+.food-box img{
+	width: 120px;
+	height: 100px;
+}
+.food-box.breakfast{
+	background: url(../images/food/breakfast.png) no-repeat;
+	background-size:36px 36px;
+}
+.food-box.lunch{
+	background: url(../images/food/lunch.png) no-repeat;
+	background-size:36px 36px;
+}
+.food-box.dessert{
+	background: url(../images/food/dessert.png) no-repeat;
+	background-size:36px 36px;
+}
+.food-box.dinner{
+	background: url(../images/food/dinner.png) no-repeat;
+	background-size:36px 36px;
+}
+
+
+.food-box-bottom{
+	padding-top:5px;
+	text-align: right;
+}
+.food-box-bottom a{
+	display: inline-block;
+	width:24px;
+	height: 24px;
+}
+.food-box-bottom a.collect{
+	background: url(../images/album/collect.png) no-repeat;
+	background-size: 100% 100%;
+}
+.food-box-bottom a.collect:active{
+	background: url(../images/album/collect_on.png) no-repeat;
+	background-size: 100% 100%;
+}
+.food-box-bottom a.comment{
+	margin-left:10px;
+	background: url(../images/album/comment.png) no-repeat;
+	background-size: 100% 100%;
+}
+.food-box-bottom a.comment:active{
+	background: url(../images/album/comment_on.png) no-repeat;
+	background-size: 100% 100%;
+}

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+    	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title>我的</title>
+		<link rel="stylesheet" type="text/css" href="../../plugins/weui/css/weui.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/common.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/myself.css"/>
+	</head>
+	<body ontouchstart>
+		<header class="header">
+			<h1 class="header-title">我的</h1>
+			<a class="header-right">切换老师</a>
+		</header>
+		<div class="container">
+			<div class="weui-tab">
+				<div class="weui-tab__panel">
+					<div class="inform-box">
+						<img src="../../images/myself/picture.png" />
+						<select class="inform-name">
+							<option>小麦兜</option>
+							<option>大麦兜</option>
+						</select>
+					</div>
+					<div class="weui-grids myself">
+				        <a href="attendance.html" class="weui-grid">
+				            <img src="../../images/myself/icon_attendance.png" class="ys-icon">
+				            <p class="weui-grid__label">考勤记录</p>
+				        </a>
+				        <a href="food.html" class="weui-grid">
+				            <img src="../../images/myself/icon_food.png" class="ys-icon">
+				            <p class="weui-grid__label">膳食记录</p>
+				        </a>
+				        <a href="morningCheck.html" class="weui-grid">
+				            <img src="../../images/myself/icon_morning.png" class="ys-icon">
+				            <p class="weui-grid__label">晨检记录</p>
+				        </a>
+				        <a href="costHistory.html" class="weui-grid">
+				            <img src="../../images/myself/icon_cost.png" class="ys-icon">
+				            <p class="weui-grid__label">缴费记录</p>
+				        </a>
+				    </div>
+					<div class="weui-cells">
+			            <a class="weui-cell weui-cell_access" href="inform.html">
+			            	<div class="weui-cell__hd"><img src="../../images/myself/icon_info.png" class="ys-icon"></div>
+			                <div class="weui-cell__bd">
+			                    <p>个人资料</p>
+			                </div>
+			                <div class="weui-cell__ft">
+			                </div>
+			            </a>
+			            <a class="weui-cell weui-cell_access" href="member.html">
+			            	<div class="weui-cell__hd"><img src="../../images/myself/icon_member.png" class="ys-icon"></div>
+			                <div class="weui-cell__bd">
+			                    <p>成员管理</p>
+			                </div>
+			                <div class="weui-cell__ft">
+			                </div>
+			            </a>
+			            <a class="weui-cell weui-cell_access" href="history.html">
+			            	<div class="weui-cell__hd"><img src="../../images/myself/icon_record.png" class="ys-icon"></div>
+			                <div class="weui-cell__bd">
+			                    <p>成长印记</p>
+			                </div>
+			                <div class="weui-cell__ft">
+			                </div>
+			            </a>
+			        </div>
+			        <div class="weui-cells">
+			            <a class="weui-cell weui-cell_access" href="applyCar.html">
+			            	<div class="weui-cell__hd"><img src="../../images/myself/icon_car.png" class="ys-icon"></div>
+			                <div class="weui-cell__bd">
+			                    <p>申请用车</p>
+			                </div>
+			                <div class="weui-cell__ft">
+			                </div>
+			            </a>
+			            <a class="weui-cell weui-cell_access" href="applyLeave.html">
+			            	<div class="weui-cell__hd"><img src="../../images/myself/icon_leave.png" class="ys-icon"></div>
+			                <div class="weui-cell__bd">
+			                    <p>申请离园</p>
+			                </div>
+			                <div class="weui-cell__ft">
+			                </div>
+			            </a>
+			            <a class="weui-cell weui-cell_access" href="applyLeave.html">
+			            	<div class="weui-cell__hd"><img src="../../images/myself/icon_left.png" class="ys-icon"></div>
+			                <div class="weui-cell__bd">
+			                    <p>申请退学</p>
+			                </div>
+			                <div class="weui-cell__ft">
+			                </div>
+			            </a>
+			        </div>
+				</div>
+			</div>
+			<!-- 底部tabbar -->
+	        <div class="weui-tabbar">
+	            <a href="../../index.html" class="weui-tabbar__item">
+	                <i class="weui-tabbar__icon icon-school"></i>
+	                <p class="weui-tabbar__label">校园</p>
+	            </a>
+	            <a href="dynamic.html" class="weui-tabbar__item">
+	            	<span style="display: inline-block;position: relative;">
+	                	<i class="weui-tabbar__icon icon-dynamic"></i>
+	                	<span class="weui-badge" style="position: absolute;top: -2px;right: -13px;">8</span>
+	                </span>
+	                <p class="weui-tabbar__label">动态</p>
+	            </a>
+	            <a href="contact.html" class="weui-tabbar__item">
+	                <i class="weui-tabbar__icon icon-contact"></i>
+	                <p class="weui-tabbar__label">通讯录</p>
+	            </a>
+	            <a href="myself.html" class="weui-tabbar__item weui-bar__item_on">
+	                <span style="display: inline-block;position: relative;">
+	                	<i class="weui-tabbar__icon icon-myself"></i>
+	                	<span class="weui-badge weui-badge_dot" style="position: absolute;top: 0;right: -6px;"></span>
+	                </span>
+	                <p class="weui-tabbar__label">我的</p>
+	            </a>
+	        </div>
+        </div>
+        <script src="../../plugins/zepto.min.js" ></script>
+        <script src="../../plugins/weui/js/weui.min.js" ></script>
+        <script type="text/javascript">
+			$(function(){
+		        //底部tab切换
+		        $('.weui-tabbar__item').on('click', function () {
+		            $(this).addClass('weui-bar__item_on').siblings('.weui-bar__item_on').removeClass('weui-bar__item_on');
+		        });
+		    });
+		</script>
+	</body>
+</html>

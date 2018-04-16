@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+    	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title>信箱内容</title>
+		<link rel="stylesheet" type="text/css" href="../../plugins/weui/css/weui.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/common.css" />
+		<style>
+			.container{
+				overflow-y: auto;
+				background-color: #f8f8f8;
+			}
+			.content-msg {
+				margin-bottom:10px;
+			}
+			.content-msg span{
+				margin-right:10px;
+				color:#999;
+			}
+			.imgbox img{
+				display: block;
+				margin-top:10px;
+				width: 100%;
+				height: auto%;
+				border: 1px solid #eee;
+			}
+			.mail-box{
+			    margin-top: 10px;
+			    padding: 10px 15px;
+			    background-color: #fff;
+			    border: 1px solid #eee;
+			}
+		</style>
+	</head>
+	<body ontouchstart>
+		<header class="header">
+			<a class="header-back"></a>
+			<h1 class="header-title">信箱内容</h1>
+		</header>
+		<div class="container">
+			<div class="weui-panel">
+                <div class="weui-media-box weui-media-box_text">
+                    <h4 class="weui-media-box__title">《放假通知》</h4>
+                    <div class="content-msg">
+                    	<span>园长</span>
+                    	<span>2017-10-11 16:30</span>
+                    </div>
+                    <p>大家好，中秋及国庆佳节即将来临，根据国务院办公厅通知精神，现将2017年中秋节、国庆节放假安排通知如下：10月1日至8日放假调休，共8天，9月30日（星期六）上班。</p>
+                    <div class="imgbox">
+                    	<img src="../../images/enrollment/main_box3.png">
+                    	<img src="../../images/myself/inform_bg.png" />
+                    </div>
+                </div>
+	        </div>
+	        <div class="mail-box">
+				<textarea class="weui-textarea" placeholder="回复：" rows="8"></textarea>
+			</div>
+			<div class="mail-box">
+				<div class="weui-cells weui-cells_form" id="uploader">
+					<div class="weui-cell">
+					    <div class="weui-cell__bd">
+					        <div class="weui-uploader">
+					            <div class="weui-uploader__hd">
+					                <p class="weui-uploader__title">上传图片</p>
+					            </div>
+					            <div class="weui-uploader__bd">
+					                <ul class="weui-uploader__files" id="uploaderFiles"></ul>
+					                <div class="weui-uploader__input-box">
+					                    <input id="uploaderInput" class="weui-uploader__input" type="file" accept="image/*" capture="camera" multiple="" />
+					                </div>
+					            </div>
+					        </div>
+					    </div>
+					</div>
+				</div>
+			</div>
+			<div class="weui-btn-area">
+				<a  class="weui-btn weui-btn_primary">发送</a>
+			</div>
+		</div>
+		
+		<script src="../../plugins/zepto.min.js"></script>
+		<script src="../../plugins/weui/js/weui.min.js" ></script>
+		<script type="text/javascript">
+			
+		</script>
+	</body>
+</html>

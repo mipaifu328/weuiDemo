@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+    	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title>计划管理</title>
+		<link rel="stylesheet" type="text/css" href="../../plugins/weui/css/weui.min.css" />
+		<script src="../../plugins/jquery-2.1.4.js"></script>
+		<!-- check -->
+	    <link rel="stylesheet" type="text/css" href="../../plugins/icheck/skins/all.css"/>
+	    <script src="../../plugins/icheck/icheck.min.js"></script>
+		
+		<link rel="stylesheet" type="text/css" href="../../css/common.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/leader/table.css"/>
+	</head>
+	<body ontouchstart>
+		<header class="header">
+			<a class="header-back"></a>
+			<h1 class="header-title">计划管理</h1>
+		</header>
+		<div class="container">
+	        <table class="ys-table">
+	        	<thead>
+	        		<tr>
+	        			<th style="width: 10%;"></th>
+	        			<th style="width: 40%;">计划标题</th>
+	        			<th style="width: 30%;">计划类型</th>
+	        			<th style="width: 20%;">进度</th>
+	        		</tr>
+	        	</thead>
+	        	<tbody>
+	        		<tr data-id = "123">
+	        			<td><input type="checkbox"/></td>
+	        			<td>标题标题</td>
+	        			<td></td>
+	        			<td>50%</td>
+	        		</tr>
+	        		<tr>
+	        			<td><input type="checkbox"/></td>
+	        			<td>标题标题</td>
+	        			<td></td>
+	        			<td>50%</td>
+	        		</tr>
+	        		<tr>
+	        			<td><input type="checkbox"/></td>
+	        			<td>标题标题</td>
+	        			<td></td>
+	        			<td>50%</td>
+	        		</tr>
+	        		<tr>
+	        			<td><input type="checkbox"/></td>
+	        			<td>标题标题</td>
+	        			<td></td>
+	        			<td>50%</td>
+	        		</tr>
+	        		<tr>
+	        			<td><input type="checkbox"/></td>
+	        			<td>标题标题</td>
+	        			<td></td>
+	        			<td>50%</td>
+	        		</tr>
+	        	</tbody>
+	        </table>
+	        <div class="weui-btn-area ys-table-bottom">
+	        	 <div class="weui-flex">
+	        	 	<div class="weui-flex__item"><a href="planAdd.html" class="weui-btn weui-btn_primary">新增计划</a></div>
+		            <div class="weui-flex__item"><a class="weui-btn weui-btn_primary">更新进度</a></div>
+		            <div class="weui-flex__item"><a class="weui-btn weui-btn_primary" id="delBtn">删除</a></div>
+		        </div>
+	        </div>
+    	</div>
+        <script src="../../plugins/zepto.min.js" ></script>
+        <script src="../../plugins/weui/js/weui.min.js" ></script>
+    	<script type="text/javascript">
+			$(document).ready(function(){
+				$('input').iCheck({
+					checkboxClass: 'icheckbox_flat-green',
+				    radioClass: 'iradio_flat-green',
+				    increaseArea: '20%' // optional
+				});
+				
+				//单选
+				$('.ys-table input').on('ifChecked',function(){
+					var that = this;
+					$('.ys-table input').each(function(){
+						if(this !== that){
+							$(this).iCheck('uncheck');
+						}
+					})
+				});
+				
+				
+				//删除操作
+				$('#delBtn').on('click',function(){
+					weui.toast('删除成功' , {
+						duration: 2000,
+						callback:function(){
+							alert(1);
+						}
+					});
+					var checked = $('tbody').find('input:checkbox:checked');
+					if(checked.length <1){
+						weui.alert('请选择要删除的计划');
+					}else{
+						weui.alert('删除：'+checked.closest('tr').attr('data-id'));
+					}
+				});
+			});
+    	</script>
+	</body>
+</html>

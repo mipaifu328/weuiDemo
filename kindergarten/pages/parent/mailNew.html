@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+    	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title>新建信件</title>
+		<link rel="stylesheet" type="text/css" href="../../plugins/weui/css/weui.min.css" />
+		<script src="../../plugins/jquery-2.1.4.js"></script>
+		<script src="../../plugins/weui/js/weui.min.js" ></script>
+		<!-- check -->
+	    <link rel="stylesheet" type="text/css" href="../../plugins/icheck/skins/all.css"/>
+	    <script src="../../plugins/icheck/icheck.min.js"></script>
+	    
+		<link rel="stylesheet" type="text/css" href="../../css/common.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/mail.css"/>
+	</head>
+	<body ontouchstart>
+		<header class="header">
+			<a class="header-back"></a>
+			<h1 class="header-title">新建信件</h1>
+		</header>
+		<div class="container">
+			<h3>给园长建议或投诉</h3>
+			<div class="mailNew-box">
+				<textarea class="weui-textarea" placeholder="" rows="8"></textarea>
+			</div>
+			<div class="mailNew-box">
+				<div class="weui-cells weui-cells_form" id="uploader">
+					<div class="weui-cell">
+					    <div class="weui-cell__bd">
+					        <div class="weui-uploader">
+					            <div class="weui-uploader__hd">
+					                <p class="weui-uploader__title">上传图片</p>
+					            </div>
+					            <div class="weui-uploader__bd">
+					                <ul class="weui-uploader__files" id="uploaderFiles"></ul>
+					                <div class="weui-uploader__input-box">
+					                    <input id="uploaderInput" class="weui-uploader__input" type="file" accept="image/*" capture="camera" multiple="" />
+					                </div>
+					            </div>
+					        </div>
+					    </div>
+					</div>
+				</div>
+			</div>
+			<div class="check-box">
+				<input type="checkbox" />匿名
+			</div>
+			<div class="weui-btn-area">
+				<a  class="weui-btn weui-btn_primary">发送</a>
+			</div>
+		</div>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$('input').iCheck({
+					checkboxClass: 'icheckbox_flat-green',
+				    radioClass: 'iradio_flat-green',
+				    increaseArea: '20%' // optional
+				});
+				
+			});
+		</script>
+	</body>
+</html>

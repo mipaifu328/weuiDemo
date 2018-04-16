@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+    	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title>我的信箱</title>
+		<link rel="stylesheet" type="text/css" href="../../plugins/weui/css/weui.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/common.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/website.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/leader/table.css"/>
+	</head>
+	<body ontouchstart>
+		<header class="header">
+			<a class="header-back"></a>
+			<h1 class="header-title">我的信箱</h1>
+		</header>
+		<div class="container">
+			<div class="weui-tab" id="tab">
+				<div class="weui-navbar">
+					<div class="weui-navbar__item">未阅读</div>
+					<div class="weui-navbar__item">已阅读</div>
+					<div class="weui-navbar__item">已回复</div>
+				</div>
+				<div class="weui-tab__panel">
+					<div class="weui-tab__content">
+						<table class="ys-table">
+				        	<thead>
+				        		<tr>
+				        			<th>班级</th>
+				        			<th>状态</th>
+				        			<th>操作</th>
+				        		</tr>
+				        	</thead>
+				        	<tbody>
+				        		<tr>
+				        			<td>早餐不好吃</td>
+				        			<td>匿名</td>
+				        			<td>未阅读</td>
+				        		</tr>
+				        	</tbody>
+				        </table>
+				        <div class="weui-btn-area">
+							<a class="weui-btn weui-btn_primary">更多</a>
+						</div>
+					</div>
+					<div class="weui-tab__content">
+						<table class="ys-table">
+				        	<thead>
+				        		<tr>
+				        			<th>班级</th>
+				        			<th>状态</th>
+				        			<th>操作</th>
+				        		</tr>
+				        	</thead>
+				        	<tbody>
+				        		<tr>
+				        			<td>早餐不好吃</td>
+				        			<td>匿名</td>
+				        			<td>已阅读</td>
+				        		</tr>
+				        	</tbody>
+				        </table>
+				        <div class="weui-btn-area">
+							<a class="weui-btn weui-btn_primary">更多</a>
+						</div>
+					</div>
+					<div class="weui-tab__content">
+						<table class="ys-table">
+				        	<thead>
+				        		<tr>
+				        			<th>班级</th>
+				        			<th>状态</th>
+				        			<th>操作</th>
+				        		</tr>
+				        	</thead>
+				        	<tbody>
+				        		<tr>
+				        			<td>早餐不好吃</td>
+				        			<td>匿名</td>
+				        			<td>已回复</td>
+				        		</tr>
+				        	</tbody>
+				        </table>
+				        <div class="weui-btn-area">
+							<a class="weui-btn weui-btn_primary">更多</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="../../plugins/zepto.min.js"></script>
+		<script src="../../plugins/weui/js/weui.min.js" ></script>
+		<script type="text/javascript">
+			weui.tab('#tab',{
+				defaultIndex: 0,
+				onChange: function(index){
+					console.log(index);
+				}
+			});
+		</script>
+	</body>
+</html>

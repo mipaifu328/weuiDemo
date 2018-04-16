@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+    	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title>成长印记</title>
+		<link rel="stylesheet" type="text/css" href="../../plugins/weui/css/weui.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/common.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/history.css"/>
+	</head>
+	<body ontouchstart>
+		<header class="header">
+			<a class="header-back"></a>
+			<h1 class="header-title">成长印记</h1>
+		</header>
+		<div class="container">
+			<div class="history-content">
+				<div style="position: fixed;top:44px;left:31px;z-index: 2;padding-right: 4px;">
+					<div class="history-items-time" id="topYear">2017年</div>
+				</div>
+				<div class="history-items">
+					<div class="history-items-time">2017年</div>
+					<div class="history-items-pannel">
+						<div class="history-pannel-title">六一儿童节活动<a class="history-btn">移除</a></div>
+						<ul class="history-imgList">
+							<li>
+								<img src="../../images/enrollment/main.png" />
+							</li>
+							<li>
+								<img src="../../images/enrollment/main.png" />
+							</li>
+							<li>
+								<img src="../../images/enrollment/main.png" />
+							</li>
+						</ul>
+						<div class="history-pannel-bottom">
+							备注：拍得好
+							<div class="history-pannel-msg">收藏于:2017-06-01</div>
+						</div>
+					</div>
+					<div class="history-items-pannel">
+						<div class="history-pannel-title">五一劳动节活动<a class="history-btn">移除</a></div>
+						<ul class="history-imgList">
+							<li>
+								<img src="../../images/enrollment/main.png" />
+							</li>
+							<li>
+								<img src="../../images/enrollment/main.png" />
+							</li>
+							<li>
+								<img src="../../images/enrollment/main.png" />
+							</li>
+						</ul>
+						<div class="history-pannel-bottom">
+							备注：非常认真
+							<div class="history-pannel-msg">收藏于:2017-05-01</div>
+						</div>
+					</div>
+				</div>
+				<div class="history-items">
+					<div class="history-items-time">2016年</div>
+					<div class="history-items-pannel">
+						<div class="history-pannel-title">六一儿童节活动<a class="history-btn">移除</a></div>
+						<ul class="history-imgList">
+							<li>
+								<img src="../../images/enrollment/main.png" />
+							</li>
+							<li>
+								<img src="../../images/enrollment/main.png" />
+							</li>
+							<li>
+								<img src="../../images/enrollment/main.png" />
+							</li>
+						</ul>
+						<div class="history-pannel-bottom">
+							备注：拍得好
+							<div class="history-pannel-msg">收藏于:2016-06-01</div>
+						</div>
+					</div>
+					<div class="history-items-pannel">
+						<div class="history-pannel-title">五一劳动节活动<a class="history-btn">移除</a></div>
+						<ul class="history-imgList">
+							<li>
+								<img src="../../images/enrollment/main.png" />
+							</li>
+							<li>
+								<img src="../../images/enrollment/main.png" />
+							</li>
+							<li>
+								<img src="../../images/enrollment/main.png" />
+							</li>
+						</ul>
+						<div class="history-pannel-bottom">
+							备注：非常认真
+							<div class="history-pannel-msg">收藏于:2016-05-01</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="history-items">
+					<div class="history-items-time">2015年</div>
+					<div class="history-items-pannel">
+						<div class="history-pannel-title">六一儿童节活动<a class="history-btn">移除</a></div>
+						<ul class="history-imgList">
+							<li>
+								<img src="../../images/enrollment/main.png" />
+							</li>
+							<li>
+								<img src="../../images/enrollment/main.png" />
+							</li>
+							<li>
+								<img src="../../images/enrollment/main.png" />
+							</li>
+						</ul>
+						<div class="history-pannel-bottom">
+							备注：拍得好
+							<div class="history-pannel-msg">收藏于:2015-06-01</div>
+						</div>
+					</div>
+					<div class="history-items-pannel">
+						<div class="history-pannel-title">五一劳动节活动<a class="history-btn">移除</a></div>
+						<ul class="history-imgList">
+							<li>
+								<img src="../../images/enrollment/main.png" />
+							</li>
+							<li>
+								<img src="../../images/enrollment/main.png" />
+							</li>
+							<li>
+								<img src="../../images/enrollment/main.png" />
+							</li>
+						</ul>
+						<div class="history-pannel-bottom">
+							备注：非常认真
+							<div class="history-pannel-msg">收藏于:2015-05-01</div>
+						</div>
+					</div>
+				</div>
+			</div>
+        </div>
+        <script src="../../plugins/zepto.min.js" ></script>
+        <script src="../../plugins/weui/js/weui.min.js" ></script>
+        <script type="text/javascript">
+        	$(function(){
+        		//年份滚动
+        		$('.container').on('touchmove',function(){
+        			var top = $('.container').scrollTop();
+        			var years=[];
+	        		$('.history-items').each(function(){
+	        			var _top = this.offsetTop;
+	        			var value = this.querySelector('.history-items-time').innerHTML;
+	        			if(_top < top){
+	        				years.push(value);
+	        			}
+	        		})
+        			if(years.length > 0){
+        				console.log(years);
+        				document.getElementById('topYear').innerHTML = years.pop();
+        				years = [];
+        			};
+        		});
+        		
+        		//点击查看图片
+		        $('.history-imgList').on('click','img',function(){
+		        	var gallery = weui.gallery(this.src, {
+						className: 'custom-classname',
+						onDelete: function(){
+							if(confirm('确定删除该图片？')){ console.log('删除'); }
+							gallery.hide(function() {
+								console.log('`gallery` has been hidden');
+							});
+						}
+					});
+		        });
+        	})
+		</script>
+	</body>
+</html>

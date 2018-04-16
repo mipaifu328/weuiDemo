@@ -1,0 +1,37 @@
+.container{
+	overflow-y: auto;
+}
+.morning-check{
+	padding:15px;
+}
+.morning-check-header{
+	padding-bottom:10px;
+	overflow: hidden;
+	border-bottom: 1px solid #eee;
+}
+.morning-check table{
+	width: 100%;
+	border-collapse:collapse;
+}
+.morning-check td,
+.morning-check th{
+	width:40%;
+	padding:10px 0;
+	text-align: center;
+	border-bottom: 1px solid #eee;
+}
+.morning-check th{
+	font-weight: normal;
+	color:#21BAA8;
+}
+.morning-check .problem td{
+	color:#F08E6B;
+}
+.morning-check td:first-child,
+.morning-check th:first-child{
+	width:20%;
+}
+
+.morning-check .weui-btn{
+	margin-top:20px;
+}

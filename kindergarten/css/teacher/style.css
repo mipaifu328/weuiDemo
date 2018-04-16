@@ -1,0 +1,37 @@
+.container{
+	padding: 10px 15px;
+	overflow-y:auto;
+	background-color: #fff;
+}
+
+/*岗位职责*/
+.job-box{
+	border: 1px solid #eee;
+	background-color:#fff;
+}
+.job-box > div{
+	margin:10px;
+	padding:10px;
+	background-color:#ddffdd;
+}
+.job-box p{
+	text-indent: 2em;
+	line-height: 24px;
+	color:#3a985c;
+}
+
+/*规章制度*/
+.rule-box img{
+	width: 100%;
+}
+.rule-box h3{
+	margin:10px 0;
+	color:#21BAA8;
+}
+.rule-box p{
+	line-height: 24px;
+	margin-bottom:20px;
+}
+.rule-box .color{
+	color:#21BAA8;
+}

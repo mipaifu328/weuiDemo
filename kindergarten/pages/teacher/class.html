@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+    	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title>班务</title>
+		<link rel="stylesheet" type="text/css" href="../../plugins/weui/css/weui.min.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/common.css" />
+	</head>
+	<body ontouchstart>
+		<header class="header">
+			<select class="header-left">
+				<option value ="volvo">小二班 张小小 </option>
+				<option value ="saab">小一班 小新</option>
+			</select>
+			<i class="icon-down"></i>
+			<h1 class="header-title">班务</h1>
+			<a class="header-right">切换家长</a>
+		</header>
+		<div class="container">
+			<div class="weui-tab">
+				<div class="weui-tab__panel">
+					<!-- 九宫格 -->
+					<div class="weui-grids">
+				        <a href="health.html" class="weui-grid">
+				            <div class="weui-grid__icon">
+				                <img src="../../images/teacher/class/health.png" alt="">
+				            </div>
+				            <p class="weui-grid__label">健康检查</p>
+				        </a>
+				        <a href="medicine.html" class="weui-grid">
+				            <div class="weui-grid__icon">
+				                <img src="../../images/teacher/class/medicine.png" alt="">
+				            </div>
+				            <p class="weui-grid__label">收药确认</p>
+				        </a>
+				        <a href="attendance.html" class="weui-grid">
+				            <div class="weui-grid__icon">
+				                <img src="../../images/teacher/class/attendance.png" alt="">
+				            </div>
+				            <p class="weui-grid__label">考勤确认</p>
+				        </a>
+				        <a href="homework.html" class="weui-grid">
+				            <div class="weui-grid__icon">
+				                <img src="../../images/teacher/class/homework.png" alt="">
+				            </div>
+				            <p class="weui-grid__label">布置作业</p>
+				        </a>
+				        <a href="homework1.html" class="weui-grid">
+				            <div class="weui-grid__icon">
+				                <img src="../../images/teacher/class/score.png" alt="">
+				                <span class="weui-badge" style="position: absolute;top: 12px;right:12px;">8</span>
+				            </div>
+				            <p class="weui-grid__label">作业评分</p>
+				        </a>
+				        <a href="../parent/contact.html" class="weui-grid">
+				            <div class="weui-grid__icon">
+				                <img src="../../images/teacher/class/contact.png" alt="">
+				            </div>
+				            <p class="weui-grid__label">通讯录</p>
+				        </a>
+				        <a href="javascript:;" class="weui-grid">
+				            <div class="weui-grid__icon">
+				                <img src="../../images/teacher/class/more.png" alt="">
+				            </div>
+				            <p class="weui-grid__label">添加</p>
+				        </a>
+				    </div>
+					<div class="weui-cells">
+			            <a class="weui-cell weui-cell_access" href="applyLeave.html">
+			            	<div class="weui-cell__hd"><img src="../../images/teacher/class/icon_apply.png" class="ys-icon"></div>
+			                <div class="weui-cell__bd">
+			                    <p>请假审批</p>
+			                </div>
+			                <div class="weui-cell__ft">
+		                    	<span class="weui-badge">2</span>
+			                </div>
+			            </a>
+			            <a class="weui-cell weui-cell_access" href="notice.html">
+			            	<div class="weui-cell__hd"><img src="../../images/teacher/class/icon_notice.png" class="ys-icon"></div>
+			                <div class="weui-cell__bd">
+			                    <p>通知管理</p>
+			                </div>
+			                <div class="weui-cell__ft">
+			                </div>
+			            </a>
+			            <a class="weui-cell weui-cell_access" href="attendance2.html">
+			            	<div class="weui-cell__hd"><img src="../../images/teacher/class/icon_attendance.png" class="ys-icon"></div>
+			                <div class="weui-cell__bd">
+			                    <p>考勤管理</p>
+			                </div>
+			                <div class="weui-cell__ft">
+			                </div>
+			            </a>
+			        </div>
+			        <div class="weui-cells">
+			            <a class="weui-cell weui-cell_access" href="medicine1.html">
+			            	<div class="weui-cell__hd"><img src="../../images/teacher/class/icon_medicine.png" class="ys-icon"></div>
+			                <div class="weui-cell__bd">
+			                    <p>药嘱确认</p>
+			                </div>
+			                <div class="weui-cell__ft">
+			                </div>
+			            </a>
+			            <a class="weui-cell weui-cell_access" href="car.html">
+			            	<div class="weui-cell__hd"><img src="../../images/teacher/class/icon_car.png" class="ys-icon"></div>
+			                <div class="weui-cell__bd">
+			                    <p>用车确认</p>
+			                </div>
+			                <div class="weui-cell__ft">
+			                </div>
+			            </a>
+			            <a class="weui-cell weui-cell_access" href="leave.html">
+			            	<div class="weui-cell__hd"><img src="../../images/teacher/class/icon_leave.png" class="ys-icon"></div>
+			                <div class="weui-cell__bd">
+			                    <p>离园确认</p>
+			                </div>
+			                <div class="weui-cell__ft">
+			                </div>
+			            </a>
+			        </div>
+			        <div class="weui-cells">
+			            <a class="weui-cell weui-cell_access" href="../parent/food.html">
+			            	<div class="weui-cell__hd"><img src="../../images/teacher/class/icon_food.png" class="ys-icon"></div>
+			                <div class="weui-cell__bd">
+			                    <p>食谱查询</p>
+			                </div>
+			                <div class="weui-cell__ft">
+			                </div>
+			            </a>
+			            <a class="weui-cell weui-cell_access" href="relation1.html">
+			            	<div class="weui-cell__hd"><img src="../../images/teacher/class/icon_relation.png" class="ys-icon"></div>
+			                <div class="weui-cell__bd">
+			                    <p>家园联系</p>
+			                </div>
+			                <div class="weui-cell__ft">
+			                </div>
+			            </a>
+			            <a class="weui-cell weui-cell_access" href="plan.html">
+			            	<div class="weui-cell__hd"><img src="../../images/teacher/class/icon_plan.png" class="ys-icon"></div>
+			                <div class="weui-cell__bd">
+			                    <p>计划查询</p>
+			                </div>
+			                <div class="weui-cell__ft">
+			                </div>
+			            </a>
+			            <a class="weui-cell weui-cell_access" href="album.html">
+			            	<div class="weui-cell__hd"><img src="../../images/teacher/class/icon_album.png" class="ys-icon"></div>
+			                <div class="weui-cell__bd">
+			                    <p>班级相册</p>
+			                </div>
+			                <div class="weui-cell__ft">
+			                </div>
+			            </a>
+			        </div>
+			    </div>
+		        <!-- 底部tabbar -->
+	            <div class="weui-tabbar">
+	                <a href="index.html" class="weui-tabbar__item">
+	                    <i class="weui-tabbar__icon icon-school"></i>
+	                    <p class="weui-tabbar__label">校园</p>
+	                </a>
+	                <a href="javascript:;" class="weui-tabbar__item">
+	                	<span style="display: inline-block;position: relative;">
+	                    	<i class="weui-tabbar__icon icon-dynamic"></i>
+	                    	<span class="weui-badge" style="position: absolute;top: -2px;right: -13px;">8</span>
+	                    </span>
+	                    <p class="weui-tabbar__label">动态</p>
+	                </a>
+	                <a href="javascript:;" class="weui-tabbar__item weui-bar__item_on">
+	                    <i class="weui-tabbar__icon icon-class"></i>
+	                    <p class="weui-tabbar__label">班务</p>
+	                </a>
+	                <a href="javascript:;" class="weui-tabbar__item">
+	                    <span style="display: inline-block;position: relative;">
+	                    	<i class="weui-tabbar__icon icon-myself"></i>
+	                    	<span class="weui-badge weui-badge_dot" style="position: absolute;top: 0;right: -6px;"></span>
+	                    </span>
+	                    <p class="weui-tabbar__label">我的</p>
+	                </a>
+	            </div>
+	        </div>
+		</div>
+	</body>
+</html>

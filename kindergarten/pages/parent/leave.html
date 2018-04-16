@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+    	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title>我要请假</title>
+		<link rel="stylesheet" type="text/css" href="../../plugins/weui/css/weui.min.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/common.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/leave.css"/>
+	</head>
+	<body ontouchstart>
+		<header class="header">
+			<a class="header-back"></a>
+			<h1 class="header-title">我要请假</h1>
+			<a class="header-right">请假记录</a>
+		</header>
+		<div class="container">
+			<div class="weui-cells">
+				<div class="weui-cell weui-cell_select weui-cell_select-after">
+	                <div class="weui-cell__hd">
+	                    <label for="" class="weui-label">请假类型</label>
+	                </div>
+	                <div class="weui-cell__bd">
+	                    <select class="weui-select" name="select2">
+	                        <option value="0">事假</option>
+	                        <option value="0">病假</option>
+	                    </select>
+	                </div>
+	            </div>
+				<div class="weui-cell">
+					<div class="weui-cell__hd"><label class="weui-label">请假时间</label></div>
+	                <div class="weui-cell__bd">
+	                    <input class="weui-input date-right" type="datetime-local" />
+	                </div>
+				</div>
+				<div class="weui-cell">
+					<div class="weui-cell__hd"><label class="weui-label">开始时间</label></div>
+	                <div class="weui-cell__bd">
+	                    <input id="startTime" class="weui-input date-right" type="datetime-local" />
+	                </div>
+				</div>
+				<div class="weui-cell">
+					<div class="weui-cell__hd"><label class="weui-label">结束时间</label></div>
+	                <div class="weui-cell__bd">
+	                    <input id="endTime" class="weui-input date-right" type="datetime-local" />
+	                </div>
+				</div>
+				<div class="weui-cell">
+					<div class="weui-cell__hd"><label class="weui-label">共请假</label></div>
+	                <div class="weui-cell__bd">
+	                    <input id="resultTime" class="weui-input" type="text" placeholder="点击输入间隔时间"/>
+	                </div>
+				</div>
+				<div class="weui-cell">
+					<div class="weui-cell__hd"><label class="weui-label">请假原因</label></div>
+	                <div class="weui-cell__bd">
+	                     <textarea class="weui-textarea" placeholder="" rows="3"></textarea>
+	                </div>
+				</div>
+			</div>
+			<div class="weui-cells weui-cells_form" id="uploader">
+					<div class="weui-cell">
+					    <div class="weui-cell__bd">
+					        <div class="weui-uploader">
+					            <div class="weui-uploader__hd">
+					                <p class="weui-uploader__title">添加图片</p>
+					            </div>
+					            <div class="weui-uploader__bd">
+					                <ul class="weui-uploader__files" id="uploaderFiles"></ul>
+					                <div class="weui-uploader__input-box">
+					                    <input id="uploaderInput" class="weui-uploader__input" type="file" accept="image/*" capture="camera" multiple="" />
+					                </div>
+					            </div>
+					        </div>
+					    </div>
+					</div>
+				</div>
+            <div class="weui-btn-area">
+	            <a class="weui-btn weui-btn_primary" href="javascript:">提交</a>
+	        </div>
+		</div>
+		<script src="../../plugins/jquery-2.1.4.js"></script>
+		<script src="../../plugins/weui/js/weui.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$('#endTime').on('input propertychange',function(){
+					var startValue = new Date($('#startTime').val()).getTime(),
+						endValue = new Date($('#endTime').val()).getTime();
+					if(startValue > endValue){
+						weui.alert('开始时间不能小于结束时间');
+						$('#endTime').val("");
+					}else{
+						var resultValue = endValue - startValue;
+						console(resultValue);
+					}
+				});
+			})
+		</script>
+	</body>
+</html>

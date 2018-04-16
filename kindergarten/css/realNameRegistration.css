@@ -1,0 +1,56 @@
+.container{
+	overflow: auto;
+}
+.upload-img{
+	position: relative;
+	width: 100%;
+	height:180px;
+	line-height: 180px;
+	text-align: center;
+	color: #21baa8;
+	border: 1px dashed #dedede;
+}
+.upload-img-icon{
+	position: relative;
+    margin-top: 74px;
+    margin-right: 4px;
+	display: inline-block;
+	width:30px;
+	height: 30px;
+	background-color:#21baa8;
+	border-radius: 15px;
+	vertical-align: top;
+}
+.upload-img-icon:before, .upload-img-icon:after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    content: " ";
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+}
+.upload-img-icon:before {
+    width: 2px;
+    height: 10px;
+}
+.upload-img-icon:after {
+    width: 10px;
+    height: 2px;
+}
+
+/*修改weui上传图片显示结果*/
+.weui-uploader__files{
+	position: absolute;
+    width: 100%;
+    height: 180px;
+    z-index: 1;
+}
+.weui-uploader__input{
+	z-index:2;
+}
+.weui-uploader__file.weui-uploader__file_status,
+.weui-uploader__file{
+	width:100%;
+	height: 180px;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+    	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title>招生说明</title>
+		<link rel="stylesheet" type="text/css" href="../../../plugins/weui/css/weui.css" />
+		<link rel="stylesheet" type="text/css" href="../../../css/common.css" />
+		<link rel="stylesheet" type="text/css" href="../../../css/enrollment.css" />
+	</head>
+	<body ontouchstart>
+		<header class="header">
+			<a class="header-back"></a>
+			<h1 class="header-title">招生说明</h1>
+		</header>
+		<div class="container instruction">
+			<h1>招生说明</h1>
+				<div class="instruction-row">
+					<label>招生年龄范围：</label><span>4~7岁</span>
+				</div>
+				<div class="instruction-row">
+					<label>所需证件：</label><span>户口本</span>
+				</div>
+				<div class="instruction-row">
+					<label>报名时间：</label><span>8月30号至9月1号</span>
+				</div>
+				<div class="instruction-row">
+					<label>联系电话：</label><span>18814598750</span>
+				</div>
+				<a id="showDialog" href="javascript:;" class="btn">在线报名</a>
+				<div class="js_dialog" id="dialog" style="display: none;">
+		            <div class="weui-mask"></div>
+		            <div class="weui-dialog">
+		                <!--<div class="weui-dialog__hd"><strong class="weui-dialog__title">弹窗标题</strong></div>-->
+		                <div class="weui-dialog__bd">您还未进行实名注册</div>
+		            	<a class="dialog-close"></a>
+		                <div class="weui-dialog__ft">
+		                    <a href="javascript:;" class="weui-dialog__btn weui-dialog__btn_primary">进行注册</a>
+		                </div>
+		            </div>
+		        </div>
+		</div>
+        <script src="../../../plugins/zepto.min.js" ></script>
+        <script src="../../../plugins/weui/js/weui.min.js" ></script>
+        <script type="text/javascript">
+        	$('#showDialog').on('click',function(){
+        		$('#dialog').fadeIn(200);
+        	})
+        	
+        	$('#dialog').on('click', '.dialog-close', function(){
+	            $(this).parents('.js_dialog').fadeOut(200);
+	        });
+        </script>
+	</body>
+</html>

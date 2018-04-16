@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+    	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title>亲子作业</title>
+		<link rel="stylesheet" type="text/css" href="../../plugins/weui/css/weui.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/common.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/homework.css"/>
+	</head>
+	<body ontouchstart>
+		<header class="header">
+			<a class="header-back"></a>
+			<h1 class="header-title">亲子作业</h1>
+		</header>
+		<div class="container">
+			<div class="homework-content">
+				今天的作业：
+				<p>帮妈妈做家务帮妈妈做家务帮妈妈做家务帮妈妈做家务帮妈妈做家务</p>
+				<img src="../../images/enrollment/main_box4.png" />
+				<div class="homework-content-bottom">
+					发布老师：张老师<br>
+					截止时间：2017-10-12
+					<a class="btn">咨询</a>
+				</div>
+			</div>
+			<div class="homework-answer">
+				<textarea class="weui-textarea" placeholder="作答：" rows="3"></textarea>
+			</div>
+			<div class="weui-cells weui-cells_form" id="uploader">
+				<div class="weui-cell">
+				    <div class="weui-cell__bd">
+				        <div class="weui-uploader">
+				            <div class="weui-uploader__hd">
+				                <p class="weui-uploader__title">上传图片</p>
+				            </div>
+				            <div class="weui-uploader__bd">
+				                <ul class="weui-uploader__files" id="uploaderFiles"></ul>
+				                <div class="weui-uploader__input-box">
+				                    <input id="uploaderInput" class="weui-uploader__input" type="file" accept="image/*" capture="camera" multiple="" />
+				                </div>
+				            </div>
+				        </div>
+				    </div>
+				</div>
+			</div>
+			<a class="weui-btn weui-btn_primary">提交作业</a>
+        </div>
+        <script src="../../plugins/zepto.min.js" ></script>
+        <script src="../../plugins/weui/js/weui.min.js" ></script>
+        <script type="text/javascript">
+			weui.uploader('#uploader', {
+			   url: 'http://localhost:8081',
+			   auto: true,
+			   type: 'file',
+			   fileVal: 'fileVal',
+			   compress: {
+			       width: 1600,
+			       height: 1600,
+			       quality: .8
+			   },
+			   onBeforeQueued: function(files) {
+			       // `this` 是轮询到的文件, `files` 是所有文件
+			
+			       if(["image/jpg", "image/jpeg", "image/png", "image/gif"].indexOf(this.type) < 0){
+			           weui.alert('请上传图片');
+			           return false; // 阻止文件添加
+			       }
+			       if(this.size > 10 * 1024 * 1024){
+			           weui.alert('请上传不超过10M的图片');
+			           return false;
+			       }
+			
+			       // return true; // 阻止默认行为，不插入预览图的框架
+			   },
+			   onQueued: function(){
+			       console.log(this);
+			
+			       // console.log(this.status); // 文件的状态：'ready', 'progress', 'success', 'fail'
+			       // console.log(this.base64); // 如果是base64上传，file.base64可以获得文件的base64
+			
+			       // this.upload(); // 如果是手动上传，这里可以通过调用upload来实现；也可以用它来实现重传。
+			       // this.stop(); // 中断上传
+			
+			       // return true; // 阻止默认行为，不显示预览图的图像
+			   },
+			   onBeforeSend: function(data, headers){
+			       console.log(this, data, headers);
+			       // $.extend(data, { test: 1 }); // 可以扩展此对象来控制上传参数
+			       // $.extend(headers, { Origin: 'http://127.0.0.1' }); // 可以扩展此对象来控制上传头部
+			
+			       // return false; // 阻止文件上传
+			   },
+			   onProgress: function(procent){
+			       console.log(this, procent);
+			       // return true; // 阻止默认行为，不使用默认的进度显示
+			   },
+			   onSuccess: function (ret) {
+			       console.log(this, ret);
+			       // return true; // 阻止默认行为，不使用默认的成功态
+			   },
+			   onError: function(err){
+			       console.log(this, err);
+			       // return true; // 阻止默认行为，不使用默认的失败态
+			   }
+			});
+		</script>
+	</body>
+</html>

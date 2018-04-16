@@ -1,0 +1,476 @@
+body,html {
+	height: 100%;
+	-webkit-tap-highlight-color: transparent;
+}
+body {
+	font-family: -apple-system-font,Helvetica Neue,Helvetica,sans-serif;
+	font-size:14px;
+	background-color: #f8f8f8;
+}
+ul {
+	list-style: none;
+}
+*{
+	color:#333;
+}
+.container{
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	overflow: hidden;
+}
+
+/*表单lable和验证码按钮*/
+.weui-label,.weui-vcode-btn{
+	color: #21baa8;
+}
+
+/*自定义按钮颜色*/
+.weui-btn_primary{
+	background-color: #21baa8;
+}
+.weui-btn_primary:not(.weui-btn_disabled):visited{
+  color:#FFFFFF;
+}
+.weui-btn_primary:not(.weui-btn_disabled):active{
+  color:rgba(255, 255, 255, 0.6);
+  background-color:#1b9588;
+}
+.weui-btn_disabled.weui-btn_primary{
+  background-color:#a3d2cd;
+}
+
+
+/*表单input居右*/
+.input-right{
+	text-align: right;
+}
+
+
+/*普通单选*/
+.ys-radio input{
+	position: absolute;
+    left: -9999em;
+}
+.ys-radio label{
+	margin:0 10px;
+	display: inline-block;
+    vertical-align: middle;
+    font: normal normal normal 14px/1 "weui";
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
+.ys-radio label:before{
+	content: '\EA01';
+    color: #C9C9C9;
+    font-size: 23px;
+    display: block;
+}
+.ys-radio input:checked + label:before{
+	content: '\EA06';
+    color: #21baa8;
+}
+/*性别单选（图片）*/
+.radio-sex label{
+	display: inline-block;
+	width:23px;
+	height:23px;
+}
+.radio-sex label:before{
+	display: none;
+}
+.radio-sex input.radio-boy + label{
+	background: url(../images/signUp/radio_boy.png) no-repeat;
+	background-size: 100% 100%;
+}
+.radio-sex input.radio-boy:checked + label{
+	background: url(../images/signUp/radio_boy_on.png) no-repeat;
+	background-size: 100% 100%;
+}
+.radio-sex input.radio-girl + label{
+	background: url(../images/signUp/radio_girl.png) no-repeat;
+	background-size: 100% 100%;
+}
+.radio-sex input.radio-girl:checked + label{
+	background: url(../images/signUp/radio_girl_on.png) no-repeat;
+	background-size: 100% 100%;
+}
+
+
+.weui-cells{
+	margin-top:.5em;
+	font-size: 16px;
+}
+
+/*图标*/
+.ys-icon{
+	display:block;
+	margin-right:5px;
+	width:36px;
+}
+
+/*switch*/
+.weui-switch-cp__input:checked~.weui-switch-cp__box, .weui-switch:checked{
+	border-color: #21BAA8;
+    background-color: #21BAA8;
+}
+
+/*日期*/
+/*weui日期*/
+.date-picker{
+	display: block;
+	width: 100%;
+    border: 0;
+    outline: 0;
+    -webkit-appearance: none;
+    background-color: transparent;
+    font-size: inherit;
+    color: inherit;
+    height: 1.47058824em;
+    line-height: 1.47058824;
+}
+.weui-picker__action{
+	color: #21BAA8;
+}
+/*H5原生日期*/
+.date-box{
+	float: left;
+	color:#21BAA8;
+	background: url(../images/date.png) 5px center no-repeat;
+	background-size:20px;
+	padding-left:30px;
+	border: none;
+	font-size: 14px;
+}
+
+input[type="date"]:before,
+input[type="datetime-local"]:before{
+    color:#A9A9A9;
+    content:attr(placeholder);
+}
+
+
+input[type="date"].full:before,
+input[type="datetime-local"].full:before {
+    color:black;
+    content:""!important;
+}
+
+
+/*九宫格样式*/
+.weui-grid {
+    width: 25%;
+    padding:10px;
+}
+.weui-grid__icon{
+	width:60px;
+	height:60px;
+}
+.weui-grid:before,.weui-grid:after{
+	border:none;
+}
+
+/*底部tabbar样式*/
+.weui-tabbar__item.weui-bar__item_on .weui-tabbar__label{
+	color:#21baa8;
+}
+.icon-school{
+	background: url(../images/index/icon_school.png) no-repeat;
+	background-size: 100% 100%;
+}
+.icon-dynamic{
+	background: url(../images/index/icon_dynamic.png) no-repeat;
+	background-size: 100% 100%;
+}
+.icon-contact{
+	background: url(../images/index/icon_contact.png) no-repeat;
+	background-size: 100% 100%;
+}
+.icon-myself{
+	background: url(../images/index/icon_myself.png) no-repeat;
+	background-size: 100% 100%;
+}
+.icon-work{
+	background: url(../images/index/icon_work.png) no-repeat;
+	background-size: 100% 100%;
+}
+.icon-class{
+	background: url(../images/index/icon_class.png) no-repeat;
+	background-size: 100% 100%;
+}
+.weui-bar__item_on .icon-school{
+	background: url(../images/index/icon_school_on.png) no-repeat;
+	background-size: 100% 100%;
+}
+.weui-bar__item_on .icon-dynamic{
+	background: url(../images/index/icon_dynamic_on.png) no-repeat;
+	background-size: 100% 100%;
+}
+.weui-bar__item_on .icon-contact{
+	background: url(../images/index/icon_contact_on.png) no-repeat;
+	background-size: 100% 100%;
+}
+.weui-bar__item_on .icon-myself{
+	background: url(../images/index/icon_myself_on.png) no-repeat;
+	background-size: 100% 100%;
+}
+.weui-bar__item_on .icon-work{
+	background: url(../images/index/icon_work_on.png) no-repeat;
+	background-size: 100% 100%;
+}
+.weui-bar__item_on .icon-class{
+	background: url(../images/index/icon_class_on.png) no-repeat;
+	background-size: 100% 100%;
+}
+
+/*弹出框按钮样式*/
+.weui-dialog__btn_primary{
+	color:#21BAA8;
+}
+
+
+/*头部header样式*/
+.header{
+	position: fixed;
+    z-index: 10;
+    right: 0;
+    left: 0;
+    height: 44px;
+    padding-right: 10px;
+    padding-left: 10px;
+    border-bottom: 0;
+    background-color: #21BAA8;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-box-shadow: 0 1px 6px #ccc;
+    box-shadow: 0 1px 6px #ccc;
+}
+.header-back{
+    position: relative;
+	margin-right: -10px;
+    margin-left: -10px;
+    padding: 10px;
+    font-size: 24px;
+    z-index: 20;
+    font-family: Muiicons;
+    font-size: 24px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1;
+    color:#fff;
+    display: inline-block;
+    text-decoration: none;
+    -webkit-font-smoothing: antialiased;
+}
+@font-face {
+    font-family: Muiicons;
+    font-weight: normal;
+    font-style: normal;
+
+    src: url('../fonts/mui.ttf') format('truetype');
+}
+.header-back:before {
+    content: '\e471';
+}
+.header-title{
+	position: absolute;
+	right: 40px;
+    left: 40px;
+    display: inline-block;
+    overflow: hidden;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    white-space: nowrap;
+    color: #fff;
+    text-overflow: ellipsis;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 44px;
+}
+
+.header-left{
+	position: relative;
+    z-index: 20;
+    font-size: 15px;
+    line-height: 44px;
+    color:#fff;
+    display: inline-block;
+}
+select.header-left{
+	width:112px;
+	padding-right:12px;
+	background-color: transparent;
+	border: none;
+	outline: 0;
+	-webkit-appearance: none;
+	height: 44px;
+    line-height: 44px;
+}
+.icon-down:after{
+	content: " ";
+	position: absolute;
+	top:18px;
+	left:106px;
+    display: inline-block;
+    margin-left: 4px;
+    border: none;
+    -webkit-transform: none;
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 8px solid #fff;
+}
+.header-right{
+	position: relative;
+	float: right;
+    z-index: 20;
+	margin-left: 10px;
+	line-height: 44px;
+	font-weight: normal;
+	font-size: 15px;
+	color:#fff;
+}
+.header-left:active,
+.header-right:active{
+	color:#1b9588;
+}
+
+.header + .container{
+	margin-top:44px;
+}
+
+/*底部评论*/
+.container.comment{
+	margin-bottom:50px;
+	overflow-y:auto;
+}
+
+.container.comment + footer{
+	position: fixed;
+    width: 100%;
+    height: 50px;
+    min-height: 50px;
+    border-top: solid 1px #bbb;
+    left: 0px;
+    bottom: 0px;
+    overflow: hidden;
+    padding: 0px 50px;
+    background-color: #fafafa;
+    box-sizing: border-box;
+}
+.footer-left {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 0px;
+    bottom: 0px;
+    background: url(../images/dynamic/emoticon.png) 10px center no-repeat;
+    background-size:32px 32px ;
+}
+.footer-center {
+    height: 100%;
+    padding: 5px 0px;
+    box-sizing: border-box;
+}
+.footer-center .input-text {
+	width: 100%;
+    height: 100%;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    background: #fff;
+    border: solid 1px #ddd;
+    padding: 10px !important;
+    font-size: 16px !important;
+    line-height: 18px !important;
+    font-family: verdana !important;
+    overflow: hidden;
+    resize: none;
+    box-sizing: border-box;
+}
+.footer-right {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    right: 0px;
+    bottom: 0px;
+    text-align: center;
+    vertical-align: middle;
+    padding: 12px 5px;
+    font-size: 16px;
+    color:#999;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+
+/*
+ *toast失败样式
+weui.toast('操作失败', {
+	duration: 3000,
+	className: 'warn-toast',
+	callback: function(){ console.log('close') }
+});
+*/
+.warn-toast .weui-icon-success-no-circle:before{
+	content: "\EA0B";
+	/*color: #F76260;*/
+}
+.weui-toast__content{
+	color:#fff;
+}
+
+
+/*日历下滚动区域*/
+.calendar-dow-box{
+	margin-top:293px;
+	position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+	overflow-y:auto ;
+	background-color:#fff;
+}
+
+/*搜索下拉匹配*/
+.weui-search-bar{
+    z-index: 1000;
+}
+.typeahead.dropdown-menu{
+	position: absolute;
+    z-index: 1000;
+    width: 100%;
+    background: #fff;
+    left: 0!important;
+    padding: 0 30px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 2px #eee;
+}
+.typeahead.dropdown-menu li{
+	height: 30px;
+	line-height: 30px;
+}
+.dropdown-menu>li>a {
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: 400;
+    line-height: 1.42857143;
+    color: #333;
+    white-space: nowrap;
+}
+.dropdown-menu>.active>a,
+.dropdown-menu>.active>a:focus,
+.dropdown-menu>.active>a:hover{
+	color: #fff;
+    text-decoration: none;
+    background-color: #21BAA8;
+    outline: 0;
+}

@@ -1,0 +1,81 @@
+/*药嘱确认-备注*/
+.medicine-remark{
+	position: relative;
+	padding-left:66px;
+	min-height: 60px;
+	display: -webkit-box;
+	-webkit-box-orient: horizontal;
+	-webkit-box-pack: center;
+	-webkit-box-align: center;
+}
+.medicine-remark img{
+	position: absolute;
+	top:0;
+	left:0;
+	display: block;
+	width: 60px;
+	height: 60px;
+}
+
+/*收药确认*/
+.medicine-top{
+	line-height: 44px;
+	font-size: 16px;
+	padding:0 15px;
+	border-bottom: 1px solid #ededed;
+}
+.medicine-color{
+	margin:0 4px;
+	color:#21BAA8;
+}
+.medicine-top .btn{
+	position: absolute;
+	top:8px;
+	right:15px;
+}
+.btn:active{
+  color:rgba(255, 255, 255, 0.6);
+  background-color:#1b9588;
+}
+
+.medicine-list-items{
+	position: relative;
+	padding: 10px 15px;
+	padding-left: 105px;
+	border-bottom: 1px solid #eee;
+}
+.medicine-list-items img{
+	position: absolute;
+	top:10px;
+	left:15px;
+	width: 80px;
+	height: 80px;
+	border:1px solid #eaeaea;
+}
+.medicine-list-items p{
+	padding:4px 0;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+.medicine-check > div{
+	position: absolute;
+	top:12px;
+	right: 19px;
+}
+
+.btn{
+	display: block;
+	width: 70px;
+	height: 24px;
+	line-height: 24px;
+	text-align: center;
+	font-size: 14px;
+	color:#21baa8;
+	background: #fff;;
+	border:1px solid #21baa8;
+	border-radius: 14px;
+}
+.btn:visited{
+  color:#FFFFFF;
+}

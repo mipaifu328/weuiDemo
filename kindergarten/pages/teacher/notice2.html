@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+    	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title>通知历史</title>
+		<link rel="stylesheet" type="text/css" href="../../plugins/weui/css/weui.min.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/common.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/teacher/form.css"/>
+	</head>
+	<body ontouchstart>
+		<header class="header">
+			<a class="header-back"></a>
+			<h1 class="header-title">通知历史</h1>
+			<a href="notice3.html" class="header-right">通知提醒</a>
+		</header>
+		<div class="container">
+			<div class="weui-cells">
+				<div class="weui-cell">
+					<div class="weui-cell__hd"><label class="weui-label">通知标题</label></div>
+	                <div class="weui-cell__bd">
+	                    <input class="weui-input" type="text" placeholder=""/>
+	                </div>
+				</div>
+				<div class="weui-cell weui-cell_select weui-cell_select-after">
+	                <div class="weui-cell__hd">
+	                    <label for="" class="weui-label">通知类型</label>
+	                </div>
+	                <div class="weui-cell__bd">
+	                    <select class="weui-select" name="select2">
+	                        <option value="0">报名通知</option>
+	                        <option value="0">缴费通知</option>
+	                    </select>
+	                </div>
+	            </div>
+				<div class="weui-cell textarea-box">
+					<div class="weui-cell__hd"><label class="weui-label">通知内容</label></div>
+	                <div class="weui-cell__bd">
+	                     <textarea class="weui-textarea" placeholder="" rows="3"></textarea>
+	                </div>
+				</div>
+				<div class="weui-cell">
+					<div class="weui-cell__hd"><label class="weui-label">截止时间</label></div>
+	                <div class="weui-cell__bd">
+	                    <input id="date" class="weui-input date-right" type="datetime-local" />
+	                </div>
+				</div>
+				<div class="weui-cell">
+					<div class="weui-cell__hd"><label class="weui-label">报名人数</label></div>
+	                <div class="weui-cell__bd">
+	                    <input class="weui-input" type="number" placeholder="点击输入间隔时间"/>
+	                </div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

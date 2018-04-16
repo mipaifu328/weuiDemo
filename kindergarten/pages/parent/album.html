@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+    	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title>班级相册</title>
+		<link rel="stylesheet" type="text/css" href="../../plugins/weui/css/weui.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/common.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/album.css"/>
+	</head>
+	<body ontouchstart>
+		<header class="header">
+			<a class="header-back"></a>
+			<h1 class="header-title">班级相册</h1>
+		</header>
+		<div class="container">
+			<div id="wrapper" class="scroll">
+				<div>
+					<div class="album-list">
+						<a href="albumContent.html" class="weui-media-box weui-media-box_appmsg">
+		                    <div class="weui-media-box__hd">
+		                        <img class="weui-media-box__thumb" src="../../images/teacher/demo1.png" alt="">
+		                    </div>
+		                    <div class="weui-media-box__bd">
+		                        <h4 class="weui-media-box__title">六一儿童节</h4>
+		                        <p class="weui-media-box__desc">小一班/10张</p>
+		                        <p class="weui-media-box__desc">李美丽老师/2017-06-01</p>
+		                    </div>
+		                </a>
+		                <a href="albumContent.html" class="weui-media-box weui-media-box_appmsg">
+		                    <div class="weui-media-box__hd">
+		                        <img class="weui-media-box__thumb" src="../../images/teacher/demo2.png" alt="">
+		                    </div>
+		                    <div class="weui-media-box__bd">
+		                        <h4 class="weui-media-box__title">六一儿童节</h4>
+		                        <p class="weui-media-box__desc">小一班/10张</p>
+		                        <p class="weui-media-box__desc">李美丽老师/2017-06-01</p>
+		                    </div>
+		                </a>
+		                <a href="albumContent.html" class="weui-media-box weui-media-box_appmsg">
+		                    <div class="weui-media-box__hd">
+		                        <img class="weui-media-box__thumb" src="../../images/teacher/demo3.png" alt="">
+		                    </div>
+		                    <div class="weui-media-box__bd">
+		                        <h4 class="weui-media-box__title">六一儿童节</h4>
+		                        <p class="weui-media-box__desc">小一班/10张</p>
+		                        <p class="weui-media-box__desc">李美丽老师/2017-06-01</p>
+		                    </div>
+		                </a>
+					</div>
+					<div id="pullUp">
+						<div class="weui-loadmore weui-loadmore_line">
+							<span class="weui-loadmore__tips">加载更多</span>
+				        </div>
+					</div>
+				</div>
+			</div>
+        </div>
+        <script src="../../plugins/zepto.min.js" ></script>
+        <script src="../../plugins/weui/js/weui.min.js" ></script>
+        <script src="../../plugins/iscroll-probe.js"></script>
+        <script type="text/javascript">
+			$(function(){
+		        var pullUpEl = document.getElementById('pullUp'),	//底部加载更多
+					pageNum = 1,									//当前第几页
+					pageSize = 10;									//一页多少条
+				
+			
+			    //初始化滚动
+			    var myScroll = new IScroll('#wrapper',{
+			    	probeType: 2
+			    });
+			    myScroll.on('scrollEnd',function(){  
+			    	//还有数据可加载
+			    	if (pullUpEl.className != "none") {
+			    		pullUpEl.innerHTML = '<div class="weui-loadmore">'+
+			    								'<i class="weui-loading"></i>'+
+									            '<span class="weui-loadmore__tips">正在加载</span>'+
+									        '</div>';
+						pullUpAction();
+					}
+			    });
+			    
+			    
+			    /**
+			     *上拉加载更多内容 
+			     */
+			    function pullUpAction(){
+			    	//还有数据可加载
+			    	if(pullUpEl.className != "none"){
+			        	setTimeout(function(){loadData(pageNum,pageSize);},1000);
+			    	}
+			    }
+			    /**
+			     * 加载分页
+			     */
+			    function loadData(num,size){
+			    	var html = $('.album-list').html();
+			    	html += '<a href="albumContent.html" class="weui-media-box weui-media-box_appmsg">'+
+			                    '<div class="weui-media-box__hd">'+
+			                        '<img class="weui-media-box__thumb" src="../../images/teacher/demo1.png" alt="">'+
+			                    '</div>'+
+			                    '<div class="weui-media-box__bd">'+
+			                        '<h4 class="weui-media-box__title">六一儿童节</h4>'+
+			                        '<p class="weui-media-box__desc">小一班/10张</p>'+
+			                        '<p class="weui-media-box__desc">李美丽老师/2017-06-01</p>'+
+			                    '</div>'+
+			                '</a>';
+			    	$('.album-list').html(html);
+			    	myScroll.refresh();
+			    	if(pageNum < 3){
+				    	pullUpEl.innerHTML = '<div class="weui-loadmore weui-loadmore_line">'+
+									             '<span class="weui-loadmore__tips">加载更多</span>'+
+									         '</div>';
+						pageNum++;
+					}else{
+						pullUpEl.innerHTML = '<div class="weui-loadmore weui-loadmore_line">'+
+									             '<span class="weui-loadmore__tips">已经到底了</span>'+
+									         '</div>';
+						pullUpEl.className = 'none';
+					}
+			    	/*$.ajax({
+			    		url:url,
+			    		type:"post",
+			    		data:{
+			    			"pageNum" : num,
+			    			"pageSize" : size
+			    		},
+			    		dataType:"json",
+			    		success:function(data){
+			    			if(data.resultCode == 0){
+			    				var html = $("#wrapper tbody").html();
+			    				
+			    				var dataList = data.resultBody.list;
+			    				if(dataList != null && dataList.length > 0){
+			    					$.each(dataList,function(idx,one){
+			    						html += "<tr>";
+			    						html += "<td>"+one.applytime+"</td>";
+			    						var statusStr = "";
+			    						if(one.applystatus == 0){
+			    							statusStr = "申请中";
+			    						}else if(one.applystatus == 1){
+			    							statusStr = "确认中";
+			    						}else if(one.applystatus == 2){
+			    							statusStr = "确认";
+			    						}
+			    						html += "<td>"+statusStr+"</td>";
+			    						html += "<td>"+one.leavestarttime+"<br/>-"+one.leaveendtime+"</td>";
+			    						html += "</tr>";
+			    					})
+			    					$("#wrapper tbody").html(html);
+			    					myScroll.refresh();
+			    					
+			    					if(!data.resultBody.hasNextPage){
+			    						pullUpEl.innerHTML = '<div class="weui-loadmore weui-loadmore_line">'+
+													             '<span class="weui-loadmore__tips">加载更多</span>'+
+													         '</div>';
+			    						pageNum++;
+			    						console.log(pageNum);
+			    					}else{
+			    						pullUpEl.innerHTML = '<div class="weui-loadmore weui-loadmore_line">'+
+													             '<span class="weui-loadmore__tips">已经到底了</span>'+
+													         '</div>';
+			    						pullUpEl.className = 'none';
+			    					}
+			    				}else{
+			    					var html = "<link rel='stylesheet' type='text/css' href='<%=path %>/static/app/css/cost.css'/>";
+			    						html += "<br/><br/>";
+			    						html += "<div class='none-cost'>";
+			    						html += "<img src='<%=path %>/static/app/images/none_cost.png' />";
+			    						html += "<span>暂无请假记录哦</span>";
+			    						html += "</div>";
+			    					$(".attendance-content table").after(html);
+			    				}
+			    			}
+			    		},
+			    		error:function(e){
+			    			
+			    		}
+			    	})*/
+			    }
+		    });
+		</script>
+	</body>
+</html>

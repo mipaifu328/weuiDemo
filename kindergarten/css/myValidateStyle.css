@@ -1,0 +1,47 @@
+label.error{
+    display: none;
+	position: absolute;
+	top:45px;
+	left:0;
+    z-index: 1000;
+    padding: 5px 10px;
+    min-width: 150px;
+    text-align: center;
+    color: #999;
+    background-color:#fff;
+    border:1px solid #21BAA8;
+    transition: all 0.15s;
+    box-shadow: 0 0 5px rgba(0,0,0,.15);
+    border-radius: 4px;
+}
+.input-right + label.error{
+	left: initial;
+	right:0;
+}
+label.error:before {
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    width: 0;
+    height: 0;
+    margin-left: -8px;
+    content: "";
+    border-width: 0 8px 8px;
+    border-color: transparent transparent #21BAA8;
+    border-style: none inset solid;
+}
+label.valid{
+	padding: 0;
+	border:0;
+}
+label.valid:before{
+	display: none;
+}
+
+
+.weui-cells{
+	overflow:visible;
+}
+.weui-cell__bd{
+	position: relative;
+}

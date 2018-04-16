@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+    	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title>新增计划</title>
+		<link rel="stylesheet" type="text/css" href="../../plugins/weui/css/weui.min.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/common.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/apply.css"/>
+	</head>
+	<body ontouchstart>
+		<header class="header">
+			<a class="header-back"></a>
+			<h1 class="header-title">新增计划</h1>
+		</header>
+		<div class="container">
+			<div class="apply-input">
+				<input type="text" placeholder="标题" />
+			</div>
+			<div class="apply-select">
+				<select id="select1">
+					<option value="1">月计划</option>
+				</select>
+			</div>
+			<div class="apply-box">
+				<textarea id="remark" class="weui-textarea" placeholder="计划说明" rows="5"></textarea>
+			</div>
+			<div class="weui-btn-area">
+				<a class="weui-btn weui-btn_primary" id="addBtn">提交</a>
+			</div>
+		</div>
+		<script src="../../plugins/zepto.min.js" ></script>
+        <script src="../../plugins/weui/js/weui.min.js" ></script>
+    	<script type="text/javascript">
+    		$('#addBtn').on('click',function(){
+    			console.log($('#select1').val());
+    		});
+    	</script>
+	</body>
+</html>

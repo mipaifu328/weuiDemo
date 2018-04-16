@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+    	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title>下拉滚动加载</title>
+		<link rel="stylesheet" type="text/css" href="../plugins/weui/css/weui.css"/>
+		<script src="../plugins/jquery-2.1.4.js"></script>
+		<script src="../plugins/weui/js/weui.js"></script>
+		<script src="../plugins/iscroll-probe.js"></script>
+		<style type="text/css">
+			#header {
+			    position: absolute;
+			    z-index: 2;
+			    top: 0;
+			    left: 0;
+			    width: 100%;
+			    height: 45px;
+			    line-height: 45px;
+			    background: #CD235C;
+			    padding: 0;
+			    color: #eee;
+			    font-size: 20px;
+			    text-align: center;
+			    font-weight: bold;
+			}
+			#wrapper {
+			    position: absolute;
+			    z-index: 1;
+			    top: 45px;
+			    bottom: 48px;
+			    left: 0;
+			    width: 100%;
+			    background: #fff;
+			    overflow: hidden;
+			}
+			.weui-loadmore{
+				display: none;
+				margin: 0 auto;
+				padding: 1em;
+				color:#999;
+			}
+			#pullUp .weui-loadmore{
+				display: block;
+				visibility: hidden;
+			}
+			#scroller ul {
+			    list-style: none;
+			    padding: 0;
+			    margin: 0;
+			    width: 100%;
+			    text-align: left;
+			}
+			#scroller li {
+			    padding: 0 10px;
+			    height: 40px;
+			    line-height: 40px;
+			    border-bottom: 1px solid #ccc;
+			    border-top: 1px solid #fff;
+			    background-color: #fafafa;
+			    font-size: 14px;
+			}
+			#footer {
+			    position: absolute;
+			    z-index: 2;
+			    bottom: 0;
+			    left: 0;
+			    width: 100%;
+			    height: 48px;
+			    background: #444;
+			    padding: 0;
+			    border-top: 1px solid #444;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="header">iScroll</div>
+
+		<div id="wrapper">
+			<div id="scroller">
+				<div id="pullDown">
+					<div class="weui-loadmore">
+			            <i class="weui-loading"></i>
+			            <span class="weui-loadmore__tips">正在加载</span>
+			        </div>
+				</div>
+				<ul>
+					<li>Pretty row 1</li>
+					<li>Pretty row 2</li>
+					<li>Pretty row 3</li>
+					<li>Pretty row 4</li>
+					<li>Pretty row 5</li>
+					<li>Pretty row 6</li>
+					<li>Pretty row 7</li>
+					<li>Pretty row 8</li>
+					<li>Pretty row 9</li>
+					<li>Pretty row 10</li>
+					<li>Pretty row 11</li>
+					<li>Pretty row 12</li>
+					<li>Pretty row 13</li>
+					<li>Pretty row 14</li>
+					<li>Pretty row 15</li>
+					<li>Pretty row 16</li>
+					<li>Pretty row 17</li>
+					<li>Pretty row 18</li>
+					<li>Pretty row 19</li>
+					<li>Pretty row 20</li>
+					<li>Pretty row 21</li>
+					<li>Pretty row 22</li>
+					<li>Pretty row 23</li>
+					<li>Pretty row 24</li>
+					<li>Pretty row 25</li>
+					<li>Pretty row 26</li>
+					<li>Pretty row 27</li>
+					<li>Pretty row 28</li>
+					<li>Pretty row 29</li>
+					<li>Pretty row 30</li>
+					<li>Pretty row 31</li>
+					<li>Pretty row 32</li>
+					<li>Pretty row 33</li>
+					<li>Pretty row 34</li>
+					<li>Pretty row 35</li>
+					<li>Pretty row 36</li>
+					<li>Pretty row 37</li>
+					<li>Pretty row 38</li>
+					<li>Pretty row 39</li>
+					<li>Pretty row 40</li>
+					<li>Pretty row 41</li>
+					<li>Pretty row 42</li>
+					<li>Pretty row 43</li>
+					<li>Pretty row 44</li>
+					<li>Pretty row 45</li>
+					<li>Pretty row 46</li>
+					<li>Pretty row 47</li>
+					<li>Pretty row 48</li>
+					<li>Pretty row 49</li>
+					<li>Pretty row 50</li>
+				</ul>
+				<div id="pullUp">
+					<div class="weui-loadmore">
+			            <i class="weui-loading"></i>
+			            <span class="weui-loadmore__tips">正在加载</span>
+			        </div>
+				</div>
+			</div>
+		</div>
+		
+		<div id="footer"></div>
+		<script type="text/javascript">
+			
+			
+			var pullDownEl = $('#pullDown');	
+			var pullUpEl = $('#pullUp');	
+			
+			//初始化IScroll
+		    var myScroll = new IScroll('#wrapper',{
+		    	probeType: 2,
+		    	mouseWheel: true,
+		    	scrollbars: true
+		    });
+		    
+		    myScroll.on('scrollStart', function() {
+				minY = this.y;
+				maxY = this.y;
+			});
+			
+			myScroll.on('scroll', function() {
+				minY = minY<this.y ? minY : this.y;
+				maxY = maxY>this.y ? maxY : this.y;
+			});
+			
+			myScroll.on('scrollEnd', function() {
+				minY = minY<this.y ? minY : this.y;
+				maxY = maxY>this.y ? maxY : this.y;
+				if (this.y - minY > 10 && (this.directionY===1)) {
+					console.log('加载更多');
+					//上拉加载
+					pullUpAction();
+				}
+				if (maxY - this.y > 10 && (this.directionY===-1)) {
+					console.log('刷新');
+					//下拉刷新
+					pullDownAction();
+				}
+			});
+			
+			/**
+			 * 上拉加载
+			 */
+			function pullUpAction(){
+				pullUpEl.find('.weui-loadmore').css('visibility','visible');
+				setTimeout(doAjax,'2000');
+			}
+			
+			/**
+			 * 下拉刷新
+			 */
+			function pullDownAction(){
+				pullDownEl.find('.weui-loadmore').css('display','block');
+				setTimeout(doAjax2,'2000');
+			}
+			
+			/**
+			 * 请求更多信息列表
+			 */
+			function doAjax(){
+				if(1){
+					pullUpEl.find('.weui-loading').hide();
+					pullUpEl.find('.weui-loadmore__tips').html('没有更多数据');
+				}else{
+					var html = '';
+					for(var i = 0 ; i < 10; i++){
+						html += '<li> more ' + i +'</li>';
+					}
+					$('#scroller ul').append(html);
+					pullUpEl.find('.weui-loadmore').css('visibility','hidden');
+				}
+				
+				myScroll.refresh();
+			}
+			
+			/**
+			 * 刷新列表
+			 */
+			function doAjax2(){
+				var html = '';
+				for(var i = 0 ; i < 10; i++){
+					html += '<li> Refresh ' + i +'</li>';
+				}
+				$('#scroller ul').prepend(html);
+				pullDownEl.find('.weui-loadmore').css('display','none');
+				myScroll.refresh();
+			}
+		</script>
+	</body>
+</html>

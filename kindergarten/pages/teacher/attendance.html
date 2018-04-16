@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+    	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title>考勤确认</title>
+		<link rel="stylesheet" type="text/css" href="../../plugins/weui/css/weui.min.css" />
+		<script src="../../plugins/jquery-2.1.4.js"></script>
+		<script src="../../plugins/weui/js/weui.min.js" ></script>
+		<!-- check -->
+	    <link rel="stylesheet" type="text/css" href="../../plugins/icheck/skins/all.css"/>
+	    <script src="../../plugins/icheck/icheck.min.js"></script>
+	    
+		<link rel="stylesheet" type="text/css" href="../../css/common.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/teacher/attendance.css"/>
+	</head>
+	<body ontouchstart>
+		<header class="header">
+			<a class="header-back"></a>
+			<h1 class="header-title">考勤确认</h1>
+		</header>
+		<div class="container">
+			<div class="attendance-title">2017/09/09 考勤</div>
+			<div class="attendance-content">
+				<div class="attendance-content-top">
+					待确认：<span class="attendance-color" id="uncheckedNum"></span> 
+					已确认：<span class="attendance-color" id="checkedNum"></span> 
+					<a class="btn">确认</a>
+				</div>
+				<div class="attendance-check">
+					<span class="attendance-color">待确认</span><input id="allCheck" type="checkbox"/>
+					<div id="allCheckBox">
+						<div class="attendance-check-box">
+							<img src="../../images/teacher/demo1.png"/>
+							<div class="check-box-bottom">
+								小麦兜<input type="checkbox"/>
+							</div>
+						</div>
+						<div class="attendance-check-box">
+							<img src="../../images/teacher/demo2.png"/>
+							<div class="check-box-bottom">
+								小葡萄<input type="checkbox"/>
+							</div>
+						</div>
+						<div class="attendance-check-box">
+							<img src="../../images/teacher/demo3.png"/>
+							<div class="check-box-bottom">
+								大麦兜<input type="checkbox"/>
+							</div>
+						</div>
+						<div class="attendance-check-box">
+							<img src="../../images/teacher/demo1.png"/>
+							<div class="check-box-bottom">
+								小麦兜<input type="checkbox"/>
+							</div>
+						</div>
+						<div class="attendance-check-box">
+							<img src="../../images/teacher/demo2.png"/>
+							<div class="check-box-bottom">
+								小葡萄<input type="checkbox"/>
+							</div>
+						</div>
+						<div class="attendance-check-box">
+							<img src="../../images/teacher/demo3.png"/>
+							<div class="check-box-bottom">
+								大麦兜<input type="checkbox"/>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="attendance-check">
+					<span class="attendance-color">已确认</span>
+					<div>
+						<div class="attendance-check-box">
+							<img src="../../images/teacher/demo1.png"/>
+							<div class="check-box-bottom">
+								小麦兜<input type="checkbox" checked/>
+							</div>
+						</div>
+						<div class="attendance-check-box">
+							<img src="../../images/teacher/demo2.png"/>
+							<div class="check-box-bottom">
+								小葡萄<input type="checkbox" checked/>
+							</div>
+						</div>
+						<div class="attendance-check-box">
+							<img src="../../images/teacher/demo3.png"/>
+							<div class="check-box-bottom">
+								大麦兜<input type="checkbox" checked/>
+							</div>
+						</div>
+						<div class="attendance-check-box">
+							<img src="../../images/teacher/demo1.png"/>
+							<div class="check-box-bottom">
+								小麦兜<input type="checkbox" checked/>
+							</div>
+						</div>
+						<div class="attendance-check-box">
+							<img src="../../images/teacher/demo2.png"/>
+							<div class="check-box-bottom">
+								小葡萄<input type="checkbox" checked/>
+							</div>
+						</div>
+						<div class="attendance-check-box">
+							<img src="../../images/teacher/demo3.png"/>
+							<div class="check-box-bottom">
+								大麦兜<input type="checkbox" checked/>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$('input').iCheck({
+					checkboxClass: 'icheckbox_flat-green',
+				    radioClass: 'iradio_flat-green',
+				    increaseArea: '20%' // optional
+				});
+				
+				//全选
+				$('#allCheck').on('ifChanged',function(){
+					if($(this).is(':checked')){
+						$('#allCheckBox').find('input').each(function(){
+							$(this).iCheck('check');
+						})
+					}else{
+						$('#allCheckBox').find('input').each(function(){
+							$(this).iCheck('uncheck');
+						})
+					}
+				});
+				
+				
+				var checkedNum = 0,		//已确认数
+					uncheckedNum = 0,	//待确定数
+					checkedNumSpan = document.getElementById('checkedNum'),
+					uncheckedNumSpan = document.getElementById('uncheckedNum');
+				//初始化
+				$('.attendance-check-box input').each(function(){
+					if($(this).is(':checked')){
+						checkedNum++;
+					}else{
+						uncheckedNum++;
+					}
+				});
+				checkedNumSpan.innerHTML = checkedNum;
+				uncheckedNumSpan.innerHTML = uncheckedNum;
+				//改变复选框
+				$('.attendance-check-box').on('ifChanged','input',function(){
+					if($(this).is(':checked')){
+						checkedNum++;
+						uncheckedNum--;
+					}else{
+						uncheckedNum++;
+						checkedNum--;
+					}
+					checkedNumSpan.innerHTML = checkedNum;
+					uncheckedNumSpan.innerHTML = uncheckedNum;
+				});
+			});
+    	</script>
+	</body>
+</html>

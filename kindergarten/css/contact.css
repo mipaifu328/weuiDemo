@@ -1,0 +1,62 @@
+.weui-search-bar__cancel-btn{
+	color:#21BAA8;
+}
+
+.weui-navbar__item{
+	padding:10px 0;
+    background-color: #fff;
+}
+.weui-navbar__item.weui-bar__item_on {
+    background-color: #fff;
+    color:#21BAA8;
+    border-bottom: 1px solid #21BAA8;
+}
+
+.weui-navbar + .weui-tab__panel{
+	padding-top:45px;
+	padding-bottom: 100px;
+}
+.tab-content{
+	display: none;
+}
+.contact-box{
+	position: relative;
+	padding:10px 15px;
+	background-color:#fff;
+	margin-top:10px;
+	overflow: hidden;
+}
+.contact-box-left img{
+	float: left;
+	margin-right: 10px;
+	width: 60px;
+	height: 60px;
+	border-radius: 30px;
+}
+.contact-box-left h3{
+	padding-top: 8px;
+	font-weight: normal;
+}
+.contact-box-left p{
+	color:#999;
+}
+.contact-box-btn{
+	position: absolute;
+	top:20px;
+	right: 15px;
+}
+.contact-box-btn a{
+	position: relative;
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+}
+.icon-msg{
+	margin-left: 15px;
+	background: url(../images/contact/msg.png) no-repeat;
+	background-size: 100% 100%;
+}
+.icon-tel{
+	background: url(../images/contact/tel.png) no-repeat;
+	background-size: 100% 100%;
+}

@@ -1,0 +1,40 @@
+.calendar{
+	position: fixed;
+}
+.course-list{
+	margin-top:293px;
+	padding:20px;
+	position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+	overflow-y:auto ;
+	background-color:#fff;
+}
+.course-list table{
+	margin-top:10px;
+	width: 100%;
+	border-collapse:collapse;
+}
+.course-list td{
+	padding:10px 0;
+	border-bottom:1px solid #eee;
+}
+.course-list td:first-child{
+	width: 35%;
+}
+.course-list td:last-child{
+	width: 30%;
+	color: #21BAA8;
+	text-align: right;
+}
+
+.course-list-title{
+	margin:0 auto;
+	font-size:0;
+	width: 75%;
+	height: 80px;
+	background: url(../images/course_list_title.png) center center no-repeat;
+	background-size:100% 60px;
+}

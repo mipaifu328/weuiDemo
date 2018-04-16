@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+    	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title>个人资料</title>
+		<link rel="stylesheet" type="text/css" href="../../plugins/weui/css/weui.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/common.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/myself.css"/>
+	</head>
+	<body ontouchstart>
+		<header class="header">
+			<a class="header-back"></a>
+			<h1 class="header-title">个人资料</h1>
+		</header>
+		<div class="container">
+			<div class="weui-tab">
+				<div class="weui-tab__panel">
+					<div class="inform-box" id="uploader">
+						<img src="../../images/myself/picture.png" />
+						<div class="change-box">
+							<a class="change-btn">更换头像</a>
+							<input class="weui-uploader__input" type="file" accept="image/*" capture="camera" />
+						</div>
+					</div>
+					<div class="weui-cells">
+						<div class="weui-cell">
+			                <div class="weui-cell__hd"><label class="weui-label">宝宝昵称</label></div>
+			                <div class="weui-cell__bd">
+			                    <input class="weui-input" type="text" placeholder="点击输入宝宝昵称"/>
+			                </div>
+			            </div>
+			            <div class="weui-cell">
+			            	<div class="weui-cell__hd">
+			                    <label for="" class="weui-label">宝宝性别</label>
+			                </div>
+			                <div class="weui-cell__bd ys-radio radio-sex">
+			                	<input type="radio" id="boy" name="sex" class="radio-boy"/><label for="boy"></label>男宝宝
+			                	<input type="radio" id="girl" name="sex" class="radio-girl" checked="checked"/><label for="girl"></label>女宝宝
+			                </div>
+				        </div>
+				        <div class="weui-cell">
+			                <div class="weui-cell__hd"><label class="weui-label">出生日期</label></div>
+			                <div class="weui-cell__bd">
+			                    <a id="datePicker" class="date-picker">2010年01月01日</a>
+			                    <!--<input type="date" name="" id="" value="2017-10-10" />-->
+			                </div>
+			            </div>
+			            <div class="weui-cell weui-cell_select weui-cell_select-after">
+			                <div class="weui-cell__hd">
+			                    <label for="" class="weui-label">所在班级</label>
+			                </div>
+			                <div class="weui-cell__bd">
+			                    <select class="weui-select" name="select2">
+			                        <option value="1">大班</option>
+			                    </select>
+			                </div>
+			            </div>
+			        </div>
+				</div>
+			</div>
+			<!-- 底部tabbar -->
+	        <div class="weui-tabbar">
+	            <a href="javascript:;" class="weui-tabbar__item">
+	                <i class="weui-tabbar__icon icon-school"></i>
+	                <p class="weui-tabbar__label">校园</p>
+	            </a>
+	            <a href="javascript:;" class="weui-tabbar__item">
+	            	<span style="display: inline-block;position: relative;">
+	                	<i class="weui-tabbar__icon icon-dynamic"></i>
+	                	<span class="weui-badge" style="position: absolute;top: -2px;right: -13px;">8</span>
+	                </span>
+	                <p class="weui-tabbar__label">动态</p>
+	            </a>
+	            <a href="javascript:;" class="weui-tabbar__item">
+	                <i class="weui-tabbar__icon icon-contact"></i>
+	                <p class="weui-tabbar__label">通讯录</p>
+	            </a>
+	            <a href="javascript:;" class="weui-tabbar__item weui-bar__item_on">
+	                <span style="display: inline-block;position: relative;">
+	                	<i class="weui-tabbar__icon icon-myself"></i>
+	                	<span class="weui-badge weui-badge_dot" style="position: absolute;top: 0;right: -6px;"></span>
+	                </span>
+	                <p class="weui-tabbar__label">我的</p>
+	            </a>
+	        </div>
+        </div>
+        <script src="../../plugins/zepto.min.js" ></script>
+        <script src="../../plugins/weui/js/weui.min.js" ></script>
+        <script type="text/javascript">
+			$(function(){
+		        //底部tab切换
+		        $('.weui-tabbar__item').on('click', function () {
+		            $(this).addClass('weui-bar__item_on').siblings('.weui-bar__item_on').removeClass('weui-bar__item_on');
+		        });
+		        
+		        document.querySelector('#datePicker').addEventListener('click', function () {
+	        		var _this = this;
+	        		weui.datePicker({
+					     start: 1990, // 从今天开始
+					     end: 2017,
+					     defaultValue: [2010, 1, 1],
+					     onChange: function(result){
+					         //_this.innerText = result;
+					     },
+					     onConfirm: function(result){
+					        _this.innerText = result[0]+'年' + (result[1]<10?'0'+result[1]:result[1])+'月' + (result[2]<10?'0'+result[2]:result[2]) + '日';
+					     },
+					     id: 'datePicker'
+					 });
+	        	});
+	        	
+	        	//头像上传
+		        weui.uploader('#uploader', {
+				   url: 'http://localhost:8081',
+				   auto: true,
+				   type: 'file',
+				   fileVal: 'fileVal',
+				   compress: {
+				       width: 1600,
+				       height: 1600,
+				       quality: .8
+				   },
+				   onBeforeQueued: function(files) {
+				       // `this` 是轮询到的文件, `files` 是所有文件
+				
+				       if(["image/jpg", "image/jpeg", "image/png", "image/gif"].indexOf(this.type) < 0){
+				           weui.alert('请上传图片');
+				           return false; // 阻止文件添加
+				       }
+				       if(this.size > 10 * 1024 * 1024){
+				           weui.alert('请上传不超过10M的图片');
+				           return false;
+				       }
+				
+				       // return true; // 阻止默认行为，不插入预览图的框架
+				   },
+				   onQueued: function(){
+				   	   //只显示上传的第一张
+				   	   /*var uploader_lists = document.querySelectorAll('#uploader li');
+				   	   if(uploader_lists.length > 1){
+				   	   	document.getElementById('uploader').removeChild(uploader_lists[0]);
+				   	   }*/
+				   	   
+				       console.log(this);
+				
+				       // console.log(this.status); // 文件的状态：'ready', 'progress', 'success', 'fail'
+				       // console.log(this.base64); // 如果是base64上传，file.base64可以获得文件的base64
+				
+				       // this.upload(); // 如果是手动上传，这里可以通过调用upload来实现；也可以用它来实现重传。
+				       // this.stop(); // 中断上传
+				
+				       // return true; // 阻止默认行为，不显示预览图的图像
+				   },
+				   onBeforeSend: function(data, headers){
+				       console.log(this, data, headers);
+				       // $.extend(data, { test: 1 }); // 可以扩展此对象来控制上传参数
+				       // $.extend(headers, { Origin: 'http://127.0.0.1' }); // 可以扩展此对象来控制上传头部
+				
+				       // return false; // 阻止文件上传
+				   },
+				   onProgress: function(procent){
+				       console.log(this, procent);
+				       // return true; // 阻止默认行为，不使用默认的进度显示
+				   },
+				   onSuccess: function (ret) {
+				       console.log(this, ret);
+				       // return true; // 阻止默认行为，不使用默认的成功态
+				   },
+				   onError: function(err){
+				       console.log(this, err);
+				       // return true; // 阻止默认行为，不使用默认的失败态
+				   }
+				});
+		    });
+		</script>
+	</body>
+</html>

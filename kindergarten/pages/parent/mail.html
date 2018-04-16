@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+    	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title>园长信箱</title>
+		<link rel="stylesheet" type="text/css" href="../../plugins/weui/css/weui.min.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/common.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/mail.css"/>
+	</head>
+	<body ontouchstart>
+		<header class="header">
+			<a class="header-back"></a>
+			<h1 class="header-title">园长信箱</h1>
+			<a class="header-right" href="mailNew.html">新建信件</a>
+		</header>
+		<div class="container">
+			<div class="weui-search-bar" id="searchBar">
+	            <form class="weui-search-bar__form">
+	                <div class="weui-search-bar__box">
+	                    <i class="weui-icon-search"></i>
+	                    <input type="search" class="weui-search-bar__input" id="searchInput" placeholder="搜索" required/>
+	                    <a href="javascript:" class="weui-icon-clear" id="searchClear"></a>
+	                </div>
+	                <label class="weui-search-bar__label" id="searchText">
+	                    <i class="weui-icon-search"></i>
+	                    <span>搜索</span>
+	                </label>
+	            </form>
+	            <a href="javascript:" class="weui-search-bar__cancel-btn" id="searchCancel">取消</a>
+	        </div>
+	        <div class="mail-list">
+	        	<a href="javascript:void(0);" class="weui-media-box weui-media-box_appmsg">
+		            <div class="weui-media-box__hd">
+		                <img class="weui-media-box__thumb" src="../../images/enrollment/cost.png" alt="">
+		            </div>
+		            <div class="weui-media-box__bd">
+		                <h4 class="weui-media-box__title">园长<span class="mail-time">2017-09-11</span></h4>
+		                <p class="weui-media-box__desc mail-txt">吃饭加个鸡蛋</p>
+		                <p class="weui-media-box__desc mail-status">已送达</p>
+		            </div>
+		        </a>
+		        <a href="javascript:void(0);" class="weui-media-box weui-media-box_appmsg">
+		            <div class="weui-media-box__hd">
+		                <img class="weui-media-box__thumb" src="../../images/enrollment/cost.png" alt="">
+		            </div>
+		            <div class="weui-media-box__bd">
+		                <h4 class="weui-media-box__title">园长<span class="mail-time">2017-09-11</span></h4>
+		                <p class="weui-media-box__desc mail-txt">回复:这个鸡蛋好吃~</p>
+		                <p class="weui-media-box__desc mail-status">已回复</p>
+		            </div>
+		        </a>
+	        </div>
+			<div class="weui-btn-area">
+				<a  class="weui-btn weui-btn_primary">更多</a>
+			</div>
+		</div>
+		<script src="../../plugins/zepto.min.js"></script>
+		<script src="../../plugins/weui/js/weui.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+		        weui.searchBar('#searchBar');
+		    });
+		</script>
+	</body>
+</html>

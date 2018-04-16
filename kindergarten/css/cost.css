@@ -1,0 +1,63 @@
+/*我的缴费*/
+h3{
+	margin:10px 15px;
+	font-weight: normal;
+}
+.cost-box{
+	margin:10px 15px;
+	padding:10px;
+	border: 1px solid #eee;
+	background: #fff;
+}
+.cost-box-bottom{
+	margin-top:40px;
+	text-align: right;
+}
+.cost-box-bottom .btn{
+	display: inline-block;
+	margin-left:8px;
+	width: 80px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	font-size: 16px;
+	color:#21baa8;
+	background: #fff;;
+	border:1px solid #21baa8;
+}
+.cost-box-bottom .btn:visited{
+  color:#FFFFFF;
+}
+.cost-box-bottom .btn:active{
+  color:rgba(255, 255, 255, 0.6);
+  background-color:#1b9588;
+}
+
+/*无缴费记录*/
+
+.none-cost{
+	margin:20px;
+	text-align: center;
+}
+.none-cost img{
+	margin:0 auto;
+	margin-bottom:20px;
+	width: 50%;
+	display: block;
+}
+.none-cost span{
+	color:#999;
+}
+/*缴费记录*/
+.cost-table{
+	width: 100%;
+	border-collapse: collapse;
+}
+.cost-table td{
+	padding:10px 20px;
+	border-bottom: 1px solid #eee;
+}
+.cost-table td:first-child{
+	width:35%;
+	color:#21BAA8;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+    	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title>左右分页</title>
+		<link rel="stylesheet" type="text/css" href="../plugins/swiper/css/swiper.min.css"/>
+		<script src="../plugins/jquery-2.1.4.js"></script>
+		<script src="../plugins/swiper/js/swiper.min.js"></script>
+		<style>
+			html,body{
+				height:100%;
+				margin:0;
+			}
+			.swiper-container {
+			    width: 100%;
+			    height: 100%;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="swiper-container">
+		    <div class="swiper-wrapper">
+		        <div class="swiper-slide">Slide 1</div>
+		        <div class="swiper-slide">Slide 2</div>
+		        <div class="swiper-slide">Slide 3</div>
+		    </div>
+		    <!-- 如果需要分页器 -->
+		    <div class="swiper-pagination"></div>
+		</div>
+		<script type="text/javascript">
+			var mySwiper = new Swiper('.swiper-container',{
+				width: window.innerWidth,
+				height : window.innerHeight,
+				pagination : '.swiper-pagination',
+				paginationType : 'fraction'
+			})
+		</script>
+	</body>
+</html>

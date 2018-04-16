@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+    	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title>晨检记录</title>
+		<link rel="stylesheet" type="text/css" href="../../plugins/weui/css/weui.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/common.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/morningCheck.css"/>
+	</head>
+	<body ontouchstart>
+		<header class="header">
+			<a class="header-back"></a>
+			<h1 class="header-title">晨检记录</h1>
+		</header>
+		<div class="container">
+			<div class="morning-check">
+				<div class="morning-check-header">
+					<input type="date" class="date-box"/>
+				</div>
+				<table>
+					<thead>
+						<tr>
+							<th>检查项</th>
+							<th>结果</th>
+							<th>备注</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>体温</td>
+							<td>正常</td>
+							<td></td>
+						</tr>
+						<tr class="problem">
+							<td>指甲</td>
+							<td>异常</td>
+							<td>指甲过长</td>
+						</tr>
+						<tr>
+							<td>喉咙</td>
+							<td>正常</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>手</td>
+							<td>正常</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>脸</td>
+							<td>正常</td>
+							<td></td>
+						</tr>
+					</tbody>
+				</table>
+				<a class="weui-btn weui-btn_primary">更多</a>
+			</div>
+        </div>
+        <script src="../../plugins/zepto.min.js" ></script>
+        <script src="../../plugins/weui/js/weui.min.js" ></script>
+        <script type="text/javascript">
+			$(function(){
+		        
+		    });
+		</script>
+	</body>
+</html>

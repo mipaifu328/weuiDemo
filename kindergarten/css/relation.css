@@ -1,0 +1,111 @@
+.container{
+	overflow-y: auto;
+}
+
+/*家园联系列表*/
+.weui-panel__hd{
+	font-size: 16px;
+	color:#333;
+}
+.relation-time{
+	position: absolute;
+	top:15px;
+	right:15px;
+	color:#999;
+	font-size: 14px;
+}
+.weui-panel__ft .weui-cell__bd{
+	color:#21BAA8;
+}
+.weui-cell_access .weui-cell__ft:after{
+	border-color:#21BAA8;
+}
+.relation-read{
+	color:#999;
+}
+
+
+/*家园联系内容*/
+.relation-top{
+	padding:15px;
+}
+.relation-top-title{
+	line-height: 28px;
+	position: relative;
+	font-size: 16px;
+}
+.relation-top-time{
+	position: absolute;
+    top: 0;
+    right: 0;
+    color: #999;
+    font-size: 14px;
+}
+.relation-img img{
+	width: 100%;
+}
+
+
+.relation-items{
+	
+}
+.relation-items-title{
+	line-height: 0;
+	font-size: 0;
+	height: 65px;	
+}
+.relation-items-title.kindergarten{
+	background: url(../images/relation/kindergarten.png) center center no-repeat;
+	background-size: 70% 45px;
+}
+.relation-items-title.home{
+	background: url(../images/relation/home.png) center center no-repeat;
+	background-size: 70% 45px;
+}
+.relation-table{
+	width: 100%;
+	border-collapse: collapse;
+}
+.relation-table td,
+.relation-table th{
+	padding:10px 0;
+	text-align: center;
+	border-top:1px solid #eee;
+}
+.relation-table th{
+	color:#21BAA8;
+	font-weight: normal;
+}
+.relation-table th:first-child{
+	width: 25%;
+}
+.last-box td{
+	vertical-align: top;
+	text-align: left;
+	padding:10px 20px;
+}
+.last-box td:first-child{
+	padding:10px 0;
+	text-align: center;
+	color:#21BAA8;
+}
+
+.flower{
+	display: inline-block;
+	width: 24px;
+	height: 30px;
+	margin:0 10px;
+	background: url(../images/relation/flower.png) no-repeat;
+	background-size: 24px 30px;
+}
+.flower.on{
+	background: url(../images/relation/flower_on.png) no-repeat;
+	background-size: 24px 30px;
+}
+
+
+
+
+.relation-bottom{
+	padding:15px;
+}

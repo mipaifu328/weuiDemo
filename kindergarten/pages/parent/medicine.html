@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+    	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title>我要药嘱</title>
+		<link rel="stylesheet" type="text/css" href="../../plugins/weui/css/weui.min.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/common.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/medicine.css"/>
+	</head>
+	<body ontouchstart>
+		<header class="header">
+			<a class="header-back"></a>
+			<h1 class="header-title">我要药嘱</h1>
+			<a class="header-right">增加药品</a>
+		</header>
+		<div class="container">
+			<div class="weui-cells">
+				<div class="weui-cell">
+					<div class="weui-cell__hd"><label class="weui-label">药品名称</label></div>
+	                <div class="weui-cell__bd">
+	                    <input class="weui-input" type="text" placeholder="点击输入药品名称"/>
+	                </div>
+				</div>
+				<div class="weui-cell">
+					<div class="weui-cell__hd"><label class="weui-label">剂量</label></div>
+	                <div class="weui-cell__bd">
+	                    <input class="weui-input" type="text" placeholder="点击输入剂量"/>
+	                </div>
+				</div>
+				<div class="weui-cell weui-cell_select weui-cell_select-after">
+	                <div class="weui-cell__hd">
+	                    <label for="" class="weui-label">粒</label>
+	                </div>
+	                <div class="weui-cell__bd">
+	                    <select class="weui-select" name="select2">
+	                        <option value="0">0粒</option>
+	                    </select>
+	                </div>
+	            </div>
+				<div class="weui-cell">
+					<div class="weui-cell__hd"><label class="weui-label">次数</label></div>
+	                <div class="weui-cell__bd">
+	                    <input class="weui-input" type="number" pattern="[0-9]*" placeholder="点击输入次数"/>
+	                </div>
+				</div>
+				<div class="weui-cell">
+					<div class="weui-cell__hd"><label class="weui-label">间隔时间</label></div>
+	                <div class="weui-cell__bd">
+	                    <input class="weui-input" type="text" placeholder="点击输入间隔时间"/>
+	                </div>
+				</div>
+				<div class="weui-cell">
+					<div class="weui-cell__hd"><label class="weui-label">用药说明</label></div>
+	                <div class="weui-cell__bd">
+	                    <input class="weui-input" type="text" placeholder="点击输入用药说明"/>
+	                </div>
+				</div>
+			</div>
+			<!--<div class="weui-cells__title">用药说明</div>
+	        <div class="weui-cells weui-cells_form">
+	            <div class="weui-cell">
+	                <div class="weui-cell__bd">
+	                    <textarea class="weui-textarea" placeholder="点击输入用药说明" rows="3"></textarea>
+	                </div>
+	            </div>
+	        </div>-->
+			<div class="weui-cells weui-cells_form" id="uploader">
+					<div class="weui-cell">
+					    <div class="weui-cell__bd">
+					        <div class="weui-uploader">
+					            <div class="weui-uploader__hd">
+					                <p class="weui-uploader__title">添加图片</p>
+					            </div>
+					            <div class="weui-uploader__bd">
+					                <ul class="weui-uploader__files" id="uploaderFiles"></ul>
+					                <div class="weui-uploader__input-box">
+					                    <input id="uploaderInput" class="weui-uploader__input" type="file" accept="image/*" capture="camera" multiple="" />
+					                </div>
+					            </div>
+					        </div>
+					    </div>
+					</div>
+				</div>
+            <div class="weui-btn-area">
+	            <a class="weui-btn weui-btn_primary" href="javascript:">提交</a>
+	        </div>
+		</div>
+	</body>
+</html>

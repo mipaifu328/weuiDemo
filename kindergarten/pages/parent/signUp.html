@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+    	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title>报名步骤一</title>
+		<link rel="stylesheet" type="text/css" href="../../plugins/weui/css/weui.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/common.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/signUp.css"/>
+	</head>
+	<body ontouchstart>
+		<header class="header">
+			<a class="header-back"></a>
+			<h1 class="header-title">报名</h1>
+		</header>
+		<div class="container">
+			<div class="signUp-top short">
+				<div class="weui-cells">
+			        <div class="weui-cell">
+		                <div class="weui-cell__hd"><label class="weui-label">宝宝姓名</label></div>
+		                <div class="weui-cell__bd">
+		                    <input name="childName" class="weui-input" type="text"/>
+		                </div>
+		            </div>
+		            <div class="weui-cell">
+		            	<div class="weui-cell__hd">
+		                    <label for="" class="weui-label">宝宝性别</label>
+		                </div>
+		                <div class="weui-cell__bd ys-radio radio-sex">
+		                	<span><input type="radio" id="sex1" name="sex" class="radio-boy" value="1"/><label for="sex1"></label>男</span>
+		                	<span><input type="radio" id="sex0" name="sex" class="radio-girl"  value="0"/><label for="sex0"></label>女</span>
+		                </div>
+			        </div>
+			        <div class="weui-cell">
+		                <div class="weui-cell__hd"><label class="weui-label">出生日期</label></div>
+		                <div class="weui-cell__bd">
+		                    <a id="datePicker" class="date-picker"></a>
+		                </div>
+		            </div>
+		            <div class="weui-cell weui-cell_select weui-cell_select-after">
+		                <div class="weui-cell__hd">
+		                    <label for="" class="weui-label">证件类型</label>
+		                </div>
+		                <div class="weui-cell__bd">
+		                    <select class="weui-select" name="idFileType">
+		                        <option value="1">身份证</option>
+		                    </select>
+		                </div>
+		            </div>
+		            <div class="weui-cell">
+		                <div class="weui-cell__hd"><label class="weui-label">证件号码</label></div>
+		                <div class="weui-cell__bd">
+		                    <input name='idNo' class="weui-input" type="text"/>
+		                </div>
+		            </div>
+		            <div class="weui-cell">
+		            	<div class="weui-cell__hd">
+		                    <label for="" class="weui-label">是否独生子女</label>
+		                </div>
+		                <div class="weui-cell__bd ys-radio">
+		                	<span><input type="radio" id="isSingle1" name="isSingle" value="1"/><label for="isSingle1"></label>是</span>
+		                	<span><input type="radio" id="isSingle0" name="isSingle" value="0"/><label for="isSingle0"></label>否</span>
+		                </div>
+			        </div>
+			        <div class="weui-cell weui-cell_select weui-cell_select-after">
+		                <div class="weui-cell__hd">
+		                    <label for="" class="weui-label">就读方式</label>
+		                </div>
+		                <div class="weui-cell__bd">
+		                    <select class="weui-select" name="stuType">
+		                        <option value="1">走读</option>
+		                    </select>
+		                </div>
+		            </div>
+		            <div class="weui-cell weui-cell_select weui-cell_select-after">
+		                <div class="weui-cell__hd">
+		                    <label for="" class="weui-label">健康情况</label>
+		                </div>
+		                <div class="weui-cell__bd">
+		                    <select class="weui-select" name="health">
+		                        <option value="1">健康</option>
+		                        <option value="2">其他</option>
+		                    </select>
+		                </div>
+		            </div>
+		            <div class="weui-cell weui-cell_select weui-cell_select-after">
+		                <div class="weui-cell__hd">
+		                    <label for="" class="weui-label">监护人证件类型</label>
+		                </div>
+		                <div class="weui-cell__bd">
+		                    <select class="weui-select" name="guardianIdFileType">
+		                        <option value="1">身份证</option>
+		                        <option value="2">其他</option>
+		                    </select>
+		                </div>
+		            </div>
+		            <div class="weui-cell">
+		                <div class="weui-cell__hd"><label class="weui-label">监护人证件号码</label></div>
+		                <div class="weui-cell__bd">
+		                    <input class="weui-input" name="guardianIdNo" type="text"/>
+		                </div>
+		            </div>
+		            <div class="weui-cell">
+		                <div class="weui-cell__hd"><label class="weui-label">监护人姓名</label></div>
+		                <div class="weui-cell__bd">
+		                    <input class="weui-input" type="text" name="guardianName"/>
+		                </div>
+		            </div>
+		            <div class="weui-cell">
+		                <div class="weui-cell__hd"><label class="weui-label">监护人手机</label></div>
+		                <div class="weui-cell__bd">
+		                    <input class="weui-input" type="number" name="mobile"/>
+		                </div>
+		            </div>
+		            <div class="weui-cell">
+		                <div class="weui-cell__hd"><label class="weui-label">现住址</label></div>
+		                <div class="weui-cell__bd">
+		                    <input class="weui-input" type="text" name="address"/>
+		                </div>
+		            </div>
+				</div>
+			<div>
+			<div class="signUp-bottom">
+				 <a href="javascript:;" class="btn">暂存</a>
+			     <a id="nextBtn" href="javascript:;" class="btn">下一步</a>
+			</div>
+   		</div>
+   		<script src="../../plugins/jquery-2.1.4.js"></script>
+        <script src="../../plugins/weui/js/weui.min.js"></script>
+        <script>
+			
+			 //读取本地存储，填值
+			 var registerStep = localStorage.getItem('registerStep') ? JSON.parse(localStorage.getItem('registerStep')) : {};
+			 for(var key in registerStep){
+			 	if(key == 'birth'){
+			 		var arr = registerStep['birth'].split('-');
+			 		$('#datePicker').text(arr[0] +'年' + arr[1] +'月' + arr[2] + '日');
+			 	}else if(key == 'sex' || key == 'isSingle'){
+			 		//单选框不能直接赋值
+			 		var value = registerStep[key];
+			 		$('#'+ key + value).attr('checked',true);
+			 	}else{
+			 		$('[name="'+ key +'"]').val(registerStep[key]);
+			 	}
+			 }
+			 
+			 //点击选择日历日期
+        	document.querySelector('#datePicker').addEventListener('click', function () {
+        		var _this = this;
+        		var dateStr =  registerStep['birth']　||　'2010-01-01';
+        		var dateArr = dateStr.split('-');
+        		showDatePicker(_this,dateArr);
+        	});
+        	
+			 //失去焦点，信息记录在本地
+			 $('input,select').blur(function(){
+				var key = $(this).attr('name');
+			 	if($(this).attr('type') == 'radio' || $(this).attr('type') == 'checkbox'){
+			 		var value = $(this).val();
+			 		console.log(this);
+			 	}else{
+				 	var value = $(this).val();
+			 	}
+			 	registerStep[key] = value;
+				localStorage.setItem('registerStep', JSON.stringify(registerStep));
+				console.log(localStorage.getItem('registerStep'));
+			 });
+			 
+			 
+			 //下一步清除本地存储
+			 $('#nextBtn').on('click',function(){
+			 	localStorage.setItem('registerStep','');
+			 })
+			 
+			 
+			 /**
+			  * 显示日历选择器
+			  * @param {Object} el 日历容器对象
+			  * @param {Array} date 日期数组 [2010, 1, 1]
+			  */
+			 function showDatePicker(el,dateArr){
+			 	weui.datePicker({
+				    start: 1990, // 从今天开始
+				    end: 2017,
+				    defaultValue: dateArr,
+				    onChange: function(result){
+				         //el.innerText = result;
+				    },
+				    onConfirm: function(result){
+				    	var year = result[0],
+				    		//小于10则前面多加一个0
+				     		month = result[1]>9?result[1]:'0'+result[1],
+				     		day = result[2]>9?result[2]:'0'+result[2];
+				        el.innerText = year +'年' + month +'月' + day + '日';
+				         
+				        var  value = year + '-' + month + '-' + day ;
+				        console.log('birth' + ': ' + value);
+					 	registerStep['birth'] = value;
+						localStorage.setItem('registerStep', JSON.stringify(registerStep));
+						console.log(localStorage.getItem('registerStep'));
+				    },
+				    id: 'datePicker'
+				});
+			 }
+        </script>
+	</body>
+</html>

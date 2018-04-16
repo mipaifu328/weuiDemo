@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+    	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title>常见问题</title>
+		<link rel="stylesheet" type="text/css" href="../../../plugins/weui/css/weui.css" />
+		<link rel="stylesheet" type="text/css" href="../../../css/common.css" />
+		<link rel="stylesheet" type="text/css" href="../../../css/enrollment.css" />
+	</head>
+	<body ontouchstart>
+		<header class="header">
+			<a class="header-back"></a>
+			<h1 class="header-title">常见问题</h1>
+		</header>
+		<div class="container problem">
+			<h1>常见问题</h1>
+			<div class="problem-box">
+				<div>
+					<label>问：</label><span>什么什么什么怎么样？</span>
+				</div>
+				<div>
+					<label>答：</label><span>应该应该这样这样</span>
+				</div>
+				<div class="problem-box-bottom">
+					问题是否对您有帮助：
+					<input type="radio" name="isHelpful" id="helpful" class="helpful"><label for="helpful"></label>是 
+					<input type="radio" name="isHelpful" id="unhelpful" class="unhelpful"><label for="unhelpful"></label>否
+				</div>
+			</div>
+		<div class="js_dialog" id="dialog">
+            <div class="weui-mask"></div>
+            <div class="weui-dialog">
+                <div class="weui-dialog__hd"><strong class="weui-dialog__title">你想了解？</strong></div>
+                <div class="weui-dialog__bd" style="padding: 0 0.8em 0.8em;border-top-left-radius:0 ;border-top-right-radius:0 ;">
+                	<textarea class="weui-textarea" rows="5" style="border:1px solid #eee;"></textarea>
+                </div>
+                <a class="dialog-close"></a>
+                <div class="weui-dialog__ft">
+                    <a href="javascript:;" class="weui-dialog__btn weui-dialog__btn_default">确定</a>
+                    <a href="javascript:;" class="weui-dialog__btn weui-dialog__btn_primary">取消</a>
+                </div>
+            </div>
+        </div>
+        </div>
+        <script src="../../../plugins/zepto.min.js" ></script>
+        <script src="../../../plugins/weui/js/weui.min.js" ></script>
+        <script type="text/javascript">
+        	$('#showDialog').on('click',function(){
+        		$('#dialog').fadeIn(200);
+        	})
+        	
+        	$('#dialog').on('click', '.dialog-close,.weui-dialog__btn', function(){
+	            $(this).parents('.js_dialog').fadeOut(200);
+	        });
+        </script>
+	</body>
+</html>

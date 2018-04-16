@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+    	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title>离园确认</title>
+		<link rel="stylesheet" type="text/css" href="../../plugins/weui/css/weui.min.css" />
+		<script src="../../plugins/jquery-2.1.4.js"></script>
+		<script src="../../plugins/weui/js/weui.min.js" ></script>
+		<!-- check -->
+	    <link rel="stylesheet" type="text/css" href="../../plugins/icheck/skins/all.css"/>
+	    <script src="../../plugins/icheck/icheck.min.js"></script>
+	    
+		<link rel="stylesheet" type="text/css" href="../../css/common.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/leader/table.css"/>
+	</head>
+	<body ontouchstart>
+		<header class="header">
+			<a class="header-back"></a>
+			<h1 class="header-title">离园确认</h1>
+			<a class="header-right">确认</a>
+		</header>
+		<div class="container">
+			<table class="ys-table">
+	        	<thead>
+	        		<tr>
+	        			<th style="width: 10%;"><input type="checkbox" id="allCheck"/></th>
+	        			<th style="width: 20%;">姓名</th>
+	        			<th style="width: 30%;">离园原因</th>
+	        			<th style="width: 40%;">联系电话</th>
+	        		</tr>
+	        	</thead>
+	        	<tbody>
+	        		<tr>
+	        			<td><input type="checkbox"/></td>
+	        			<td>小麦兜</td>
+	        			<td>生病</td>
+	        			<td>15945474552</td>
+	        		</tr>
+	        		<tr>
+	        			<td><input type="checkbox"/></td>
+	        			<td>小葡萄</td>
+	        			<td>生病</td>
+	        			<td>18945473251</td>
+	        		</tr>
+	        	</tbody>
+	        </table>
+		</div>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$('input').iCheck({
+					checkboxClass: 'icheckbox_flat-green',
+				    radioClass: 'iradio_flat-green',
+				    increaseArea: '20%' // optional
+				});
+				
+				//全选
+				$('#allCheck').on('ifChanged',function(){
+					if($(this).is(':checked')){
+						$('.ys-table tbody').find('input').each(function(){
+							$(this).iCheck('check');
+						})
+					}else{
+						$('.ys-table tbody').find('input').each(function(){
+							$(this).iCheck('uncheck');
+						})
+					}
+				});
+				
+				$('#adviceBtn').on('click',function(){
+					weui.dialog({
+					    title: '建议',
+					    content: '<textarea class="weui-textarea" rows="5" style="border:1px solid #eee;"></textarea>',
+					    className: 'custom-classname',
+					    buttons: [{
+					        label: '取消',
+					        type: 'default',
+					        onClick: function () { alert('取消') }
+					    }, {
+					        label: '确定',
+					        type: 'primary',
+					        onClick: function () { alert('确定') }
+					    }]
+					});
+				});
+			});
+    	</script>
+	</body>
+</html>

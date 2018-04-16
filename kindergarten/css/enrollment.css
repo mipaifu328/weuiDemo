@@ -1,0 +1,286 @@
+/*方正毡笔黑简体*/
+/*@font-face {
+    font-family: 'zhengfang';
+    src: url('../fonts/zhengfang.eot');
+    src: url('../fonts/zhengfang.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/zhengfang.woff') format('woff'),
+         url('../fonts/zhengfang.ttf') format('truetype'),
+         url('../fonts/zhengfang.svg#webfont34M5alKg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}*/
+
+/*招生公告首页*/
+.home{
+	background: url(../images/enrollment/home.png) no-repeat;
+	background-size: 100% 100%;
+}
+
+.home h1{
+	padding-top: 12%;
+	padding-left: 24%;
+	padding-bottom: 8%;;
+	font-family: "zhengfang";
+	color:#fff;
+	-webkit-text-stroke: 0.5px #21BAA8;
+	font-size: 21px;
+}
+.home p{
+	font-family: "zhengfang";
+	color:#fff;
+	padding-left: 15px;;
+	font-size: 14px;
+	-webkit-text-stroke: 0.5px #21BAA8;
+}
+.map{
+	margin:6% 15px;
+	height: 44%;
+	background: #fff;
+	border: 1px solid #21BAA8;
+}
+.home-bottom{
+	font-family: "zhengfang";
+	-webkit-text-stroke: 1px #21BAA8;
+	font-size: 18px;
+	color:#fff;
+	text-align: center;
+}
+
+
+/*收费公示*/
+.cost{
+	background: url(../images/enrollment/cost.png) no-repeat;
+	background-size: 100% 100%;
+	
+}
+.cost h1{
+	font-family: "zhengfang";
+	color: #21BAA8;
+	margin-top:40%;
+	text-align: center;
+	font-weight: normal;
+	letter-spacing: 4px;
+}
+.cost table{
+	margin:0 auto;
+	width: 80%;
+	text-align: left;
+	border-collapse: collapse;
+}
+.cost th{
+	color:#21BAA8;
+	font-weight: normal;
+}
+.cost td,
+.cost th{
+	padding: 10px;
+	border-bottom: 1px solid #eee;
+}
+.cost th:first-child{
+	width: 40%;
+}
+.cost td:last-child,
+.cost th:last-child{
+	text-align:right;
+}
+
+/*招生公告主页面*/
+.main{
+	background: url(../images/enrollment/main.png) no-repeat;
+	background-size: 100% 100%;
+}
+.main h1{
+	font-family: "zhengfang";
+	color: #21BAA8;
+	margin-top:22%;
+	/*margin-left: 34%;*/
+	text-align: center;
+	font-size: 26px;
+	font-weight: normal;
+	letter-spacing: 4px;
+}
+.main a{
+	display: block;
+	width: 30%;
+	height: 12%;
+	padding-top:5%;
+	padding-left: 9%;
+	background:url(../images/enrollment/main_box1.png) no-repeat;
+	background-size:100% 100%;
+	color: #21BAA8;
+	font-size: 16px;
+	font-family: "zhengfang";
+	box-sizing: border-box;
+}
+.main a.main-box-1{
+	margin-top:10%;
+	margin-left:18%;
+	background:url(../images/enrollment/main_box1.png) no-repeat;
+	background-size:100% 100%;
+}
+.main a.main-box-2{
+	margin-left:60%;
+	background:url(../images/enrollment/main_box2.png) no-repeat;
+	background-size:100% 100%;
+}
+.main a.main-box-3{
+	margin-left:18%;
+	background:url(../images/enrollment/main_box3.png) no-repeat;
+	background-size:100% 100%;
+}
+.main a.main-box-4{
+	margin-left:60%;
+	background:url(../images/enrollment/main_box4.png) no-repeat;
+	background-size:100% 100%;
+}
+
+/*招生说明*/
+.instruction{
+	background:url(../images/enrollment/instruction.png) no-repeat;
+	background-size:100%;
+}
+.instruction h1{
+	font-family: "zhengfang";
+	color: #ac6439;
+	margin-top:42%;
+	margin-left: 30%;
+	margin-bottom:4%;
+	font-weight: normal;
+	letter-spacing: 8px;
+}
+.instruction-row{
+	width: 80%;
+	margin-left:25%;
+	line-height: 30px;
+}
+.instruction-row label{
+	color:#21baa8;
+}
+.btn{
+	display: block;
+	margin:0 auto;
+	margin-top:4%;
+	width: 33%;
+	padding:1.5% 0;
+	line-height: 24px;
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+	color: #21baa8;
+	border: 1px solid #21baa8;
+	box-sizing: border-box;
+}
+
+.btn:visited{
+  color:#FFFFFF;
+}
+.btn:active{
+  color:rgba(255, 255, 255, 0.6);
+  background-color:#1b9588;
+}
+
+/*常见问题*/
+.problem{
+	background:url(../images/enrollment/problem.png) no-repeat;
+	background-size:100% 100%;
+}
+.problem h1{
+	font-family: "zhengfang";
+	color: #21BAA8;
+	margin-top:32%;
+	margin-bottom: 10%;
+	text-align: center;;
+	font-weight: normal;
+	letter-spacing: 6px;
+}
+.problem-box > div{
+	margin:0 auto;
+	width:70%;
+	line-height: 32px;
+}
+.problem-box  .problem-box-bottom{
+	margin-top:15%;
+	width: 100%;
+	text-align: center;
+	color:#999;
+}
+.problem-box label{
+	color:#21BAA8;
+}
+
+/*弹出框dialog自定义样式*/
+.weui-dialog{
+	padding-top:80px;
+	padding-left:28px;
+	padding-right:20px;
+	background: url(../images/enrollment/dialog_title.png) left top no-repeat;
+	background-size:150px 80px;
+}
+.dialog-close{
+	content: "";
+	display: block;
+	position: absolute;
+	top:0;
+	right: 0;
+	width:30px;
+	height: 30px;
+	background: url(../images/enrollment/dialog_close.png) no-repeat;
+	background-size: 100% 100%;
+}
+.weui-dialog__bd{
+	background-color: #fff;
+	border-radius: 4px;
+}
+.weui-dialog__hd{
+	background-color: #fff;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+}
+.weui-dialog__ft{
+	margin-top:10px;
+	border-radius: 4px;
+	background-color: #21BAA8;
+}
+.weui-dialog__ft .weui-dialog__btn{
+	color: #fff;
+}
+.weui-dialog__ft .weui-dialog__btn:active{
+	color: #fff;
+}
+.weui-dialog__ft .weui-dialog__btn:visited{
+	color:#FFFFFF;
+}
+.weui-dialog__ft .weui-dialog__btn:active{
+  color:rgba(255, 255, 255, 0.6);
+  background-color:#1b9588;
+}
+
+/*是否有帮助单选按钮*/
+input.helpful,input.unhelpful{
+	display: none;
+}
+input.helpful + label{
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	margin:0 4px;
+	background: url(../images/enrollment/icon_good.png) no-repeat;
+	background-size: 100% 100%;
+}
+input.helpful:checked + label{
+	background: url(../images/enrollment/icon_good_on.png) no-repeat;
+	background-size: 100% 100%;
+}
+input.unhelpful + label{
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	margin:0 4px;
+	background: url(../images/enrollment/icon_bad.png) no-repeat;
+	background-size: 100% 100%;
+}
+input.unhelpful:checked + label{
+	background: url(../images/enrollment/icon_bad_on.png) no-repeat;
+	background-size: 100% 100%;
+}
+

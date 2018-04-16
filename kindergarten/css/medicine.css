@@ -1,0 +1,75 @@
+.container{
+	overflow-y: auto;
+}
+.weui-label{
+	color:#333;
+	width:140px;
+}
+.weui-input{
+	text-align: right;
+}
+.weui-select{
+	direction: rtl;
+}
+.weui-cell_select .weui-cell__bd:after{
+	
+    content: " ";
+    display: inline-block;
+    border: none;
+    -webkit-transform: none;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid #21baa8;
+    /*border-color: #21baa8;
+    -webkit-transform: matrix(-0.71, 0.71, -0.71, -0.71, 0, 0);
+    transform: matrix(-0.71, 0.71, -0.71, -0.71, 0, 0);*/
+}
+
+.weui-cells.weui-cells_form{
+	margin-top:-1px;
+}
+.weui-cells__title{
+	margin:0;
+	padding: 10px 15px;
+	color:#333;
+	font-size: 16px;
+	background-color: #fff;
+}
+
+
+
+::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #999;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    #999;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    #999;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:    #999;
+}
+
+
+
+/*药嘱记录*/
+.weui-cell__bd .txt{
+	color: #999;
+	text-align: right;
+}
+
+.img-list img{
+	display: block;	
+	float: left;
+	margin-left: 2%;
+	width:32%;
+	height: 100px;
+	border: 1px solid #eee;
+	box-sizing: border-box;
+}
+.img-list img:first-child{
+	margin-left:0;
+}

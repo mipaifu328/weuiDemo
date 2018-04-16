@@ -1,0 +1,111 @@
+.container{
+	overflow-y: auto;
+	background-color: #fff;
+}
+.notice-box{
+	margin:10px 15px;
+	padding:10px;
+	border:1px solid #eee;
+	background-color: #fff;
+}
+.notice-msg{
+	margin: 6px 0;
+}
+.notice-msg span{
+	margin-right: 10px;
+	color:#999;
+}
+.notice-box img{
+	max-width: 100%;
+}
+.notice-box p{
+	margin: 0 0 .8em;
+	word-wrap: break-word;
+}
+
+.btn{
+	display: block;
+	margin-left:15px;
+	width: 80px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	font-size: 16px;
+	color:#21baa8;
+	background: #fff;;
+	border:1px solid #21baa8;
+}
+.btn:visited{
+  color:#FFFFFF;
+}
+.btn:active{
+  color:rgba(255, 255, 255, 0.6);
+  background-color:#1b9588;
+}
+
+
+.notice-table{
+	margin-top:15px;
+	table-layout: fixed;
+	width: 100%;
+	border-collapse: collapse;
+}
+.notice-table td,
+.notice-table th{
+	padding:10px 0;
+	border-bottom:1px solid #eee;
+	text-align: center;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap; 
+}
+.notice-table th{
+	color:#21BAA8;
+	font-weight: normal;
+	border-top:1px solid #eee;
+}
+.notice-table th:first-child{
+	width: 100px;
+}
+.notice-table th:last-child{
+	width: 100px;
+}
+
+
+.notice-bottom{
+	margin:10px 15px;
+	overflow: hidden;
+}
+.notice-bottom .btn{
+	float: left;
+	margin-left: 0;
+}
+.notice-bottom .btn:last-child{
+	float: right;
+}
+
+/*用户回复列表*/
+.comments{
+	padding:10px 15px;
+}
+.comments > div{
+	position: relative;
+	margin-top: 10px;
+	padding-left: 50px;
+	min-height: 40px;
+}
+.comments .p-img{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 40px;
+	height: 40px;
+	border-radius: 20px;
+}
+.comment-content{
+	padding-top:5px;
+	line-height: 30px;
+}
+.comment-content .p-name{
+	color:#21BAA8;
+}

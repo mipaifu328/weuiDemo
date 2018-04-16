@@ -1,0 +1,40 @@
+.ys-table{
+	table-layout: fixed;
+	width: 100%;
+	border-collapse: collapse;
+}
+.ys-table td,
+.ys-table th{
+	padding: 10px;
+	border-bottom:1px solid #eee;
+	text-align: center;
+}
+.ys-table th{
+	color:#21BAA8;
+	font-weight: normal;
+}
+.ys-table .table-link{
+	color:#21BAA8;
+}
+/*横线滚动的table*/
+.long-width-table{
+	overflow: auto;
+}
+.long-width-table .ys-table{
+	width: 150%;
+}
+.long-width-table .ys-table td,
+.long-width-table .ys-table th{
+	padding:10px 0;
+}
+.long-width-table .ys-table img{
+	width: 100%;
+}
+
+
+/*底部按钮*/
+.ys-table-bottom .weui-btn{
+	margin:0 5px;
+	font-size: 15px;
+	padding:0;
+}

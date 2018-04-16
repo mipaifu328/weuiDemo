@@ -1,0 +1,25 @@
+.container{
+	overflow-y: auto;
+}
+.weui-label{
+	color:#333;
+	width:100px;
+}
+.weui-input{
+	text-align: right;
+}
+.weui-select{
+	direction: rtl;
+}
+.date-right{
+	display: inline;
+	position: absolute;
+	top:10px;
+	right: 0px;
+	text-align: right;
+}
+.weui-cell.textarea-box{
+	-webkit-box-align: inherit;
+    -webkit-align-items: inherit;
+    align-items: inherit;
+}
